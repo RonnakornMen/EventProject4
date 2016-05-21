@@ -22,6 +22,7 @@ import playn.core.util.Clock;
 import sut.game01.core.bin.BlueBin;
 import sut.game01.core.bin.GreenBin;
 import sut.game01.core.trash.*;
+import sut.game01.core.trash.Box;
 import sut.game01.core.bin.YellowBin;
 import tripleplay.game.Screen;
 import react.UnitSlot;
@@ -89,6 +90,9 @@ public class GameScreen extends Screen {
     ArrayList<PlasticBottle> plasticBottleRemove =new ArrayList<PlasticBottle>();
     ArrayList<Book> bookRemove =new ArrayList<Book>();
     ArrayList<PlasticGlass> plasticGlassRemove =new ArrayList<PlasticGlass>();
+    ArrayList<Box> boxRemove =new ArrayList<Box>();
+    ArrayList<Cooler> coolerRemove =new ArrayList<Cooler>();
+    ArrayList<Tv> tvRemove =new ArrayList<Tv>();
     ArrayList<Trash> t = new ArrayList<Trash>();
     int t1 = 0;
     ArrayList<Can> can = new ArrayList<Can>();
@@ -101,6 +105,12 @@ public class GameScreen extends Screen {
     int bookNum =0;
     ArrayList<PlasticGlass> plasticGlass = new ArrayList<PlasticGlass>();
     int plasticGlassNum =0;
+    ArrayList<Box> box = new ArrayList<Box>();
+    int boxNum =0;
+    ArrayList<Cooler> cooler = new ArrayList<Cooler>();
+    int coolerNum =0;
+    ArrayList<Tv> tv = new ArrayList<Tv>();
+    int tvNum =0;
     int trashNum = 0;
     int timeI = 0;
     int bottleGlass3 = 0;
@@ -137,7 +147,7 @@ public class GameScreen extends Screen {
     private DebugDrawBox2D debugDraw;
 
     Random rand = new Random();
-    int nRand = rand.nextInt(6) + 1;
+    int nRand = rand.nextInt(9) + 1;
 
 
 
@@ -163,6 +173,12 @@ public class GameScreen extends Screen {
             nextString = "Book";
         else if (nRand == 6)
             nextString = "Plastic Glass";
+        else if (nRand == 7)
+            nextString = "Paper Box";
+        else if (nRand == 8)
+            nextString = "Cooler";
+        else if (nRand == 9)
+            nextString = "TV";
 
         debugString = "Next is " + nextString;
 
@@ -327,6 +343,12 @@ public class GameScreen extends Screen {
         layer.add(book.get(bookNum).layer());
         plasticGlass.add(plasticGlassNum, new PlasticGlass(world, -100f, 480f));
         layer.add(plasticGlass.get(plasticGlassNum).layer());
+        box.add(boxNum, new Box(world, -100f, 480f));
+        layer.add(box.get(boxNum).layer());
+        cooler.add(coolerNum, new Cooler(world, -100f, 480f));
+        layer.add(cooler.get(coolerNum).layer());
+        tv.add(tvNum, new Tv(world, -100f, 480f));
+        layer.add(tv.get(tvNum).layer());
 
 
         this.layer.add(wall);
@@ -525,6 +547,15 @@ public class GameScreen extends Screen {
         }
         for (int k6 = 0; k6 <= bookNum; k6++) {
             book.get(k6).update(delta);
+        }
+        for (int k7 = 0; k7 <= boxNum; k7++) {
+            box.get(k7).update(delta);
+        }
+        for (int k8 = 0; k8 <= coolerNum; k8++) {
+            cooler.get(k8).update(delta);
+        }
+        for (int k9 = 0; k9 <= tvNum; k9++) {
+            tv.get(k9).update(delta);
         }
        /* if(destroy == true){
             // t.get(t1).layer().destroy();
@@ -766,6 +797,106 @@ public class GameScreen extends Screen {
 
                         }
                     }
+                    for (Box box2: box) {
+                        if ((contact.getFixtureA().getBody() == box2.getBody() && "blueBin" == bodies.get(b)) ||
+                                (contact.getFixtureA().getBody() == box2.getBody() && "yellowBin" == bodies.get(b)) ||
+                                (contact.getFixtureA().getBody() == box2.getBody() && "greenBin" == bodies.get(b))||
+                                (contact.getFixtureA().getBody() == box2.getBody() && "ground2" == bodies.get(b))) {
+                            if ("ground2" != bodies.get(b)&&"blueBin" == bodies.get(b)){
+                                score += 10;
+                            }
+                            else if("yellowBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
+                                if (score > 0)
+                                    score -= 5;
+                            }
+                            box2.layer().destroy();
+                            boxRemove.add(box2);
+
+                        }
+                        if ((contact.getFixtureB().getBody() == box2.getBody() && "blueBin" == bodies.get(a)) ||
+                                (contact.getFixtureB().getBody() == box2.getBody() && "yellowBin" == bodies.get(a)) ||
+                                (contact.getFixtureB().getBody() == box2.getBody() && "greenBin" == bodies.get(a))||
+                                (contact.getFixtureB().getBody() == box2.getBody() && "ground2" == bodies.get(a))) {
+                            if ("ground2" != bodies.get(b)&&"blueBin" == bodies.get(b)){
+                                score += 10;
+                            }
+                            else if("yellowBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
+                                if (score > 0)
+                                    score -= 5;
+                            }
+                            box2.layer().destroy();
+                            boxRemove.add(box2);
+
+
+                        }
+                    }
+                    for (Cooler cooler2: cooler) {
+                        if ((contact.getFixtureA().getBody() == cooler2.getBody() && "blueBin" == bodies.get(b)) ||
+                                (contact.getFixtureA().getBody() == cooler2.getBody() && "yellowBin" == bodies.get(b)) ||
+                                (contact.getFixtureA().getBody() == cooler2.getBody() && "greenBin" == bodies.get(b))||
+                                (contact.getFixtureA().getBody() == cooler2.getBody() && "ground2" == bodies.get(b))) {
+                            if ("ground2" != bodies.get(b)&&"yellowBin" == bodies.get(b)){
+                                score += 10;
+                            }
+                            else if("blueBin" == bodies.get(b) || "greenBin" == bodies.get(b)){
+                                if (score > 0)
+                                    score -=5;
+                            }
+                            cooler2.layer().destroy();
+                            coolerRemove.add(cooler2);
+
+                        }
+                        if ((contact.getFixtureB().getBody() == cooler2.getBody() && "blueBin" == bodies.get(a)) ||
+                                (contact.getFixtureB().getBody() == cooler2.getBody() && "yellowBin" == bodies.get(a)) ||
+                                (contact.getFixtureB().getBody() == cooler2.getBody() && "greenBin" == bodies.get(a))||
+                                (contact.getFixtureB().getBody() == cooler2.getBody() && "ground2" == bodies.get(a))) {
+                            if ("ground2" != bodies.get(b)&&"yellowBin" == bodies.get(b)){
+                                score += 10;
+                            }
+                            else if("blueBin" == bodies.get(b) || "greenBin" == bodies.get(b)){
+                                if (score > 0)
+                                    score -=5;
+                            }
+                            cooler2.layer().destroy();
+                            coolerRemove.add(cooler2);
+
+
+                        }
+                    }
+                    for (Tv tv2: tv) {
+                        if ((contact.getFixtureA().getBody() == tv2.getBody() && "blueBin" == bodies.get(b)) ||
+                                (contact.getFixtureA().getBody() == tv2.getBody() && "yellowBin" == bodies.get(b)) ||
+                                (contact.getFixtureA().getBody() == tv2.getBody() && "greenBin" == bodies.get(b))||
+                                (contact.getFixtureA().getBody() == tv2.getBody() && "ground2" == bodies.get(b))) {
+                            if ("ground2" != bodies.get(b)&&"greenBin" == bodies.get(b)){
+                                score += 10;
+                            }
+                            else if("blueBin" == bodies.get(b) || "yellowBin" == bodies.get(b)){
+                                if (score > 0)
+                                    score -=5;
+                            }
+                            tv2.layer().destroy();
+                            tvRemove.add(tv2);
+
+                        }
+                        if ((contact.getFixtureB().getBody() == tv2.getBody() && "blueBin" == bodies.get(a)) ||
+                                (contact.getFixtureB().getBody() == tv2.getBody() && "yellowBin" == bodies.get(a)) ||
+                                (contact.getFixtureB().getBody() == tv2.getBody() && "greenBin" == bodies.get(a))||
+                                (contact.getFixtureB().getBody() == tv2.getBody() && "ground2" == bodies.get(a))) {
+                            if ("ground2" != bodies.get(b)&&"greenBin" == bodies.get(b)){
+                                score += 10;
+                            }
+                            else if("blueBin" == bodies.get(b) || "yellowBin" == bodies.get(b)){
+                                if (score > 0)
+                                    score -=5;
+                            }
+                            tv2.layer().destroy();
+                            tvRemove.add(tv2);
+
+
+                        }
+
+                    }
 
                 }
 
@@ -804,6 +935,15 @@ public class GameScreen extends Screen {
         for(PlasticGlass plasticGlass1Removes: plasticGlassRemove){
             world.destroyBody(plasticGlass1Removes.getBody());
         }
+        for(Box boxRemoves: boxRemove){
+            world.destroyBody(boxRemoves.getBody());
+        }
+        for(Cooler coolerRemoves: coolerRemove){
+            world.destroyBody(coolerRemoves.getBody());
+        }
+        for(Tv tvRemoves: tvRemove){
+            world.destroyBody(tvRemoves.getBody());
+        }
 
 
 
@@ -834,6 +974,15 @@ public class GameScreen extends Screen {
 
         for (int k6 = 0; k6 <= bookNum; k6++)
             book.get(k6).paint(clock);
+
+        for (int k7 = 0; k7 <= boxNum; k7++)
+            box.get(k7).paint(clock);
+
+        for (int k9 = 0; k9 <= coolerNum; k9++)
+            cooler.get(k9).paint(clock);
+
+        for (int k9 = 0; k9 <= tvNum; k9++)
+            tv.get(k9).paint(clock);
 
         if (showDebugDraw) {
             debugDraw.getCanvas().clear();
@@ -908,7 +1057,7 @@ public class GameScreen extends Screen {
                     Gauge.power(-99);
                     next = nRand;
 
-                    nRand = rand.nextInt(6) + 1;
+                    nRand = rand.nextInt(9) + 1;
                     if (nRand == 1)
                         nextString = "Paper";
                     else if (nRand == 2)
@@ -922,6 +1071,12 @@ public class GameScreen extends Screen {
                         nextString = "Book";
                     else if (nRand == 6)
                         nextString = "Plastic Glass";
+                     else if (nRand == 7)
+                        nextString = "Paper Box";
+                    else if (nRand == 8)
+                        nextString = "Cooler";
+                    else if (nRand == 9)
+                        nextString = "TV";
                     debugString = "Next is " + nextString;
                     //nRand =1;
                     if (next == 1)
@@ -943,6 +1098,16 @@ public class GameScreen extends Screen {
                     else if (next == 6)
                         //createTrash(t1);
                         createPlasticGlass(plasticGlassNum);
+                    else if (next == 7)
+                        //createTrash(t1);
+                        //createCan(canNum);
+                        createBox(boxNum);
+                    else if (next == 8)
+                        //createTrash(t1);
+                        createCooler(coolerNum);
+                    else if (next == 9)
+                        //createTrash(t1);
+                        createTv(tvNum);
 
 
                 }
@@ -1044,6 +1209,30 @@ public class GameScreen extends Screen {
         layer.add(plasticGlass.get(plasticGlassNum).layer());
         plasticGlass.get(plasticGlassNum).hasThrow(1);
         plasticGlassNum++;
+    }
+    public void createBox(int boxNum2) {
+        this.boxNum = boxNum2;
+        box.add(boxNum, new Box(world, xMike2 + 30, yMike2 - 70));
+        bodies.put(box, "Box " + boxNum);
+        layer.add(box.get(boxNum).layer());
+        box.get(boxNum).hasThrow(1);
+        boxNum++;
+    }
+    public void createCooler(int coolerNum2) {
+        this.coolerNum = coolerNum2;
+        cooler.add(coolerNum, new Cooler(world, xMike2 + 30, yMike2 - 70));
+        bodies.put(cooler, "Cooler " + coolerNum);
+        layer.add(cooler.get(coolerNum).layer());
+        cooler.get(coolerNum).hasThrow(1);
+        coolerNum++;
+    }
+    public void createTv(int tvNum2) {
+        this.tvNum = tvNum2;
+        tv.add(tvNum, new Tv(world, xMike2 + 30, yMike2 - 70));
+        bodies.put(tv, "Tv " + tvNum);
+        layer.add(tv.get(tvNum).layer());
+        tv.get(tvNum).hasThrow(1);
+        tvNum++;
     }
 
 
