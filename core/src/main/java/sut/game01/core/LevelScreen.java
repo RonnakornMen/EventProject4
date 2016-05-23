@@ -21,6 +21,9 @@ public class LevelScreen extends Screen  {
 
   private final ScreenStack ss;
   private final GameScreen gameScreen;
+  private final GameScreen2 gameScreen2;
+  private final GameScreen3 gameScreen3;
+  private final GameScreen4 gameScreen4;
   private final ImageLayer bg;
   private final ImageLayer homeButton;
   private final ImageLayer levelSelect;
@@ -34,6 +37,9 @@ public class LevelScreen extends Screen  {
   public LevelScreen(final ScreenStack ss){
     this.ss = ss;
     this.gameScreen =new GameScreen(ss);
+    this.gameScreen2 =new GameScreen2(ss);
+    this.gameScreen3 =new GameScreen3(ss);
+    this.gameScreen4 =new GameScreen4(ss);
     Image bgImage = assets().getImage("images/bg.png");
     this.bg = graphics().createImageLayer(bgImage);
     
@@ -59,14 +65,37 @@ public class LevelScreen extends Screen  {
     this.level2 = graphics().createImageLayer(level2Image);
     level2.setTranslation(220, 140);
 
+    level2.addListener(new Mouse.LayerAdapter(){
+          @Override
+          public void onMouseUp(Mouse.ButtonEvent event){
+              ss.push(gameScreen2);
+
+          }
+      });
+
     Image level3Image = assets().getImage("images/level3.png");
     this.level3 = graphics().createImageLayer(level3Image);
     level3.setTranslation(300, 140);
+
+    level3.addListener(new Mouse.LayerAdapter(){
+          @Override
+          public void onMouseUp(Mouse.ButtonEvent event){
+              ss.push(gameScreen3);
+
+          }
+      });
 
     Image level4Image = assets().getImage("images/level4.png");
     this.level4 = graphics().createImageLayer(level4Image);
     level4.setTranslation(380, 140);
 
+    level4.addListener(new Mouse.LayerAdapter(){
+          @Override
+          public void onMouseUp(Mouse.ButtonEvent event){
+              ss.push(gameScreen4);
+
+          }
+      });
 
     //============================================================backButton
     Image homeImage = assets().getImage("images/homeButton.png");
