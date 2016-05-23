@@ -63,6 +63,7 @@ public class GameScreen extends Screen {
     private final ImageLayer greenBin;
     private final  ImageLayer scoreWindows;
     private final ImageLayer nextWindows;
+    private final ImageLayer windWindows;
     private final ImageLayer clock;
     private Image bgImage;
     private Image cloudImage;
@@ -142,12 +143,16 @@ public class GameScreen extends Screen {
     private float power3;
     int next = 0;
     private String nextString;
+    private String windString;
     private World world;
     private boolean showDebugDraw = true;
     private DebugDrawBox2D debugDraw;
 
     Random rand = new Random();
     int nRand = rand.nextInt(9) + 1;
+
+    Random rand2 = new Random();
+    int windRand = rand2.nextInt(5) + 1;
 
 
 
@@ -181,6 +186,8 @@ public class GameScreen extends Screen {
             nextString = "TV";
 
         debugString = "Next is " + nextString;
+        windRand = windRand * (-100);
+        windString = "WIND =  " + windRand;
 
         bgImage = assets().getImage("images/bg.png");
         this.bg = graphics().createImageLayer(bgImage);
@@ -277,6 +284,10 @@ public class GameScreen extends Screen {
         Image nextWindowsImage = assets().getImage("images/scoreWindows.png");
         this.nextWindows = graphics().createImageLayer(nextWindowsImage);
         nextWindows.setTranslation(10, 30);
+        //===========================================================================nextWindows
+        Image windWindowsImage = assets().getImage("images/windWindows.png");
+        this.windWindows = graphics().createImageLayer(windWindowsImage);
+        windWindows.setTranslation(250, 110);
 
 
         //==================================================================mario
@@ -312,9 +323,12 @@ public class GameScreen extends Screen {
         this.layer.add(blueBin);
         this.layer.add(yellowBin);
         this.layer.add(greenBin);
+
+
         this.layer.add(scoreWindows);
         this.layer.add(clock);
         this.layer.add(nextWindows);
+        this.layer.add(windWindows);
 
         mike.getBody().setTransform(new Vec2(100f * M_PER_PIXEL, 480f * M_PER_PIXEL), 0);
         //mike = new Mike(world, 100f, 480f);
@@ -367,9 +381,9 @@ public class GameScreen extends Screen {
             debugDraw.setStrokeAlpha(150);
             debugDraw.setFillAlpha(75);
             debugDraw.setStrokeWidth(2.0f);
-           /* debugDraw.setFlags(DebugDraw.e_shapeBit |
+           debugDraw.setFlags(DebugDraw.e_shapeBit |
                     DebugDraw.e_jointBit |
-                    DebugDraw.e_aabbBit);*/
+                    DebugDraw.e_aabbBit);
 
             debugDraw.setCamera(0, 0, 1f / M_PER_PIXEL);
             world.setDebugDraw(debugDraw);
@@ -991,6 +1005,7 @@ public class GameScreen extends Screen {
             debugDraw.getCanvas().drawText(debugString, 15, 50);
             debugDraw.getCanvas().drawText(strScore, 510, 40);
             debugDraw.getCanvas().drawText(strTime, 420, 60);
+            debugDraw.getCanvas().drawText(windString, 270, 130);
             world.drawDebugData();
         }
 
@@ -1164,6 +1179,7 @@ public class GameScreen extends Screen {
         layer.add(can.get(canNum).layer());
         can.get(canNum).hasThrow(1);
         canNum++;
+
         /*can.add(canNum, new Can(world, xMike2 + 20, yMike2 - 70));
         canNum++;
         for (int i =0 ; i <= canNum ; i++){
@@ -1181,6 +1197,7 @@ public class GameScreen extends Screen {
         layer.add(bottleGlass.get(bottleGlassNum).layer());
         bottleGlass.get(bottleGlassNum).hasThrow(1);
         bottleGlassNum++;
+
     }
 
     public void createPlasticBottle(int plasticBottleNum2) {
@@ -1190,6 +1207,7 @@ public class GameScreen extends Screen {
         layer.add(plasticBottle.get(plasticBottleNum).layer());
         plasticBottle.get(plasticBottleNum).hasThrow(1);
         plasticBottleNum++;
+
     }
 
 
@@ -1200,6 +1218,7 @@ public class GameScreen extends Screen {
         layer.add(book.get(bookNum).layer());
         book.get(bookNum).hasThrow(1);
         bookNum++;
+
     }
 
     public void createPlasticGlass(int plasticGlassNum2) {
@@ -1209,6 +1228,7 @@ public class GameScreen extends Screen {
         layer.add(plasticGlass.get(plasticGlassNum).layer());
         plasticGlass.get(plasticGlassNum).hasThrow(1);
         plasticGlassNum++;
+
     }
     public void createBox(int boxNum2) {
         this.boxNum = boxNum2;
@@ -1217,6 +1237,7 @@ public class GameScreen extends Screen {
         layer.add(box.get(boxNum).layer());
         box.get(boxNum).hasThrow(1);
         boxNum++;
+
     }
     public void createCooler(int coolerNum2) {
         this.coolerNum = coolerNum2;
@@ -1225,6 +1246,7 @@ public class GameScreen extends Screen {
         layer.add(cooler.get(coolerNum).layer());
         cooler.get(coolerNum).hasThrow(1);
         coolerNum++;
+
     }
     public void createTv(int tvNum2) {
         this.tvNum = tvNum2;
@@ -1233,6 +1255,7 @@ public class GameScreen extends Screen {
         layer.add(tv.get(tvNum).layer());
         tv.get(tvNum).hasThrow(1);
         tvNum++;
+
     }
 
 

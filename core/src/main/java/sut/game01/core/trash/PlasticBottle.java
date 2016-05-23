@@ -121,7 +121,7 @@ public class PlasticBottle {
         shape.setRadius(0.7f);*/
         PolygonShape shape = new PolygonShape();
         shape.setAsBox(30 * GameScreen.M_PER_PIXEL / 2,
-                50* GameScreen.M_PER_PIXEL / 2);
+                30* GameScreen.M_PER_PIXEL / 2);
 
         FixtureDef fixtureDef = new FixtureDef();//น้ำหนัก
         fixtureDef.shape = shape;
