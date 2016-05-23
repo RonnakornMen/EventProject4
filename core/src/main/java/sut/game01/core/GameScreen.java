@@ -149,7 +149,7 @@ public class GameScreen extends Screen {
     private DebugDrawBox2D debugDraw;
 
     Random rand = new Random();
-    int nRand = rand.nextInt(9) + 1;
+    int nRand = rand.nextInt(3) + 1;
 
     Random rand2 = new Random();
     int windRand = rand2.nextInt(5) + 1;
@@ -328,7 +328,7 @@ public class GameScreen extends Screen {
         this.layer.add(scoreWindows);
         this.layer.add(clock);
         this.layer.add(nextWindows);
-        this.layer.add(windWindows);
+        //this.layer.add(windWindows);
 
         mike.getBody().setTransform(new Vec2(100f * M_PER_PIXEL, 480f * M_PER_PIXEL), 0);
         //mike = new Mike(world, 100f, 480f);
@@ -1005,7 +1005,7 @@ public class GameScreen extends Screen {
             debugDraw.getCanvas().drawText(debugString, 15, 50);
             debugDraw.getCanvas().drawText(strScore, 510, 40);
             debugDraw.getCanvas().drawText(strTime, 420, 60);
-            debugDraw.getCanvas().drawText(windString, 270, 130);
+            //debugDraw.getCanvas().drawText(windString, 270, 130);
             world.drawDebugData();
         }
 

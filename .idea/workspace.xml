@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c29492b-c5c3-4315-adba-451c6786f2bc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen3.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen4.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/LevelScreen$1.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/LevelScreen$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/LevelScreen$2.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/LevelScreen$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/LevelScreen.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/LevelScreen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/game01-core-1.0-SNAPSHOT-sources.jar" afterPath="$PROJECT_DIR$/core/target/game01-core-1.0-SNAPSHOT-sources.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/LevelScreen.java" afterPath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/LevelScreen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen.java" afterPath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="game01.iws" />
@@ -38,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GameScreen.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GameScreen.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1581" max-vertical-offset="22678">
-              <caret line="154" column="34" selection-start-line="0" selection-start-column="0" selection-end-line="1392" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.45363408" vertical-offset="15850" max-vertical-offset="22678">
+              <caret line="1007" column="14" selection-start-line="1007" selection-start-column="14" selection-end-line="1007" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -74,10 +67,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameScreen4.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GameScreen4.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen4.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38345864" vertical-offset="1836" max-vertical-offset="22729">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1122" max-vertical-offset="22729">
               <caret line="158" column="22" selection-start-line="158" selection-start-column="22" selection-end-line="158" selection-end-column="22" />
               <folding>
                 <element signature="e#6713#6897#0" expanded="true" />
@@ -125,11 +118,11 @@
         <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Box.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Tv.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Book.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen2.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen3.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen4.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/LevelScreen.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen.java" />
       </list>
     </option>
   </component>
@@ -806,25 +799,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1581" max-vertical-offset="22678">
-          <caret line="154" column="34" selection-start-line="0" selection-start-column="0" selection-end-line="1392" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1887" max-vertical-offset="22729">
-          <caret line="158" column="22" selection-start-line="0" selection-start-column="0" selection-end-line="1392" selection-end-column="0" />
-          <folding>
-            <element signature="e#6713#6897#0" expanded="true" />
-            <element signature="e#6896#6897#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen3.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1734" max-vertical-offset="22729">
@@ -855,12 +829,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen4.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38345864" vertical-offset="1836" max-vertical-offset="22729">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1122" max-vertical-offset="22729">
           <caret line="158" column="22" selection-start-line="158" selection-start-column="22" selection-end-line="158" selection-end-column="22" />
           <folding>
             <element signature="e#6713#6897#0" expanded="true" />
             <element signature="e#6896#6897#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1887" max-vertical-offset="22729">
+          <caret line="158" column="22" selection-start-line="0" selection-start-column="0" selection-end-line="1392" selection-end-column="0" />
+          <folding>
+            <element signature="e#6713#6897#0" expanded="true" />
+            <element signature="e#6896#6897#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45363408" vertical-offset="15850" max-vertical-offset="22678">
+          <caret line="1007" column="14" selection-start-line="1007" selection-start-column="14" selection-end-line="1007" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
