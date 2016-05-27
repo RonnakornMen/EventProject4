@@ -2,7 +2,118 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c29492b-c5c3-4315-adba-451c6786f2bc" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\cygwin64\home\VThai\event\NullScreen\assets\src\main\resources\assets\images\backButton.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Book$1.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Book$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Book$State.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Book$State.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Book.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Book.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/BottleGlass$1.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/BottleGlass$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/BottleGlass$State.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/BottleGlass$State.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/BottleGlass.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/BottleGlass.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Box$1.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Box$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Box$State.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Box$State.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Box.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Box.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Can$1.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Can$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Can$State.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Can$State.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Can.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Can.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Cooler$1.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Cooler$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Cooler$State.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Cooler$State.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Cooler.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Cooler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen$1.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen$2.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen$3.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen$4.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen$5.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen$6.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen$7.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen$8.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen2$1.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen2$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen2$2.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen2$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen2$3.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen2$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen2$4.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen2$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen2$5.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen2$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen2$6.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen2$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen2$7.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen2$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen2$8.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen2$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen2.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen3$1.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen3$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen3$2.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen3$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen3$3.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen3$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen3$4.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen3$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen3$5.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen3$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen3$6.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen3$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen3$7.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen3$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen3$8.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen3$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen3.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen4$1.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen4$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen4$2.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen4$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen4$3.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen4$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen4$4.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen4$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen4$5.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen4$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen4$6.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen4$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen4$7.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen4$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen4$8.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen4$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen4.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/GameScreen4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/gauge/Gauge$1.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/gauge/Gauge$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/gauge/Gauge$State.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/gauge/Gauge$State.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/gauge/Gauge.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/gauge/Gauge.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/HomeScreen$1.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/HomeScreen$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/HomeScreen$2.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/HomeScreen$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/HomeScreen$3.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/HomeScreen$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/HomeScreen.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/HomeScreen.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/character/Mike$1.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/character/Mike$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/character/Mike$2.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/character/Mike$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/character/Mike$3.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/character/Mike$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/character/Mike$State.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/character/Mike$State.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/character/Mike.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/character/Mike.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/PlasticBottle$1.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/PlasticBottle$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/PlasticBottle$State.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/PlasticBottle$State.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/PlasticBottle.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/PlasticBottle.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/PlasticGlass$1.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/PlasticGlass$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/PlasticGlass$State.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/PlasticGlass$State.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/PlasticGlass.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/PlasticGlass.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/SettingScreen$1.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/SettingScreen$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/SettingScreen.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/SettingScreen.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Trash$1.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Trash$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Trash$State.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Trash$State.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Trash.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Trash.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Tv$1.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Tv$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Tv$State.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Tv$State.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Tv.class" afterPath="$PROJECT_DIR$/core/target/classes/sut/game01/core/trash/Tv.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/src/main/resources/assets/images/back.png" afterPath="$PROJECT_DIR$/assets/src/main/resources/assets/images/back.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/target/classes/assets/images/back.png" afterPath="$PROJECT_DIR$/assets/target/classes/assets/images/back.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/src/main/resources/assets/images/trash/book.png" afterPath="$PROJECT_DIR$/assets/src/main/resources/assets/images/trash/book.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/target/classes/assets/images/trash/book.png" afterPath="$PROJECT_DIR$/assets/target/classes/assets/images/trash/book.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/src/main/resources/assets/images/trash/box.png" afterPath="$PROJECT_DIR$/assets/src/main/resources/assets/images/trash/box.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/target/classes/assets/images/trash/box.png" afterPath="$PROJECT_DIR$/assets/target/classes/assets/images/trash/box.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/src/main/resources/assets/images/trash/cooler.png" afterPath="$PROJECT_DIR$/assets/src/main/resources/assets/images/trash/cooler.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/target/classes/assets/images/trash/cooler.png" afterPath="$PROJECT_DIR$/assets/target/classes/assets/images/trash/cooler.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/target/game01-core-1.0-SNAPSHOT-sources.jar" afterPath="$PROJECT_DIR$/core/target/game01-core-1.0-SNAPSHOT-sources.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/src/main/resources/assets/images/name.png" afterPath="$PROJECT_DIR$/assets/src/main/resources/assets/images/name.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/target/classes/assets/images/name.png" afterPath="$PROJECT_DIR$/assets/target/classes/assets/images/name.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/src/main/resources/assets/images/trash/tv.png" afterPath="$PROJECT_DIR$/assets/src/main/resources/assets/images/trash/tv.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/target/classes/assets/images/trash/tv.png" afterPath="$PROJECT_DIR$/assets/target/classes/assets/images/trash/tv.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/src/main/resources/assets/images/window1.png" afterPath="$PROJECT_DIR$/assets/src/main/resources/assets/images/window1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/target/classes/assets/images/window1.png" afterPath="$PROJECT_DIR$/assets/target/classes/assets/images/window1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/src/main/resources/assets/images/window2.png" afterPath="$PROJECT_DIR$/assets/src/main/resources/assets/images/window2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/target/classes/assets/images/window2.png" afterPath="$PROJECT_DIR$/assets/target/classes/assets/images/window2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Book.java" afterPath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Book.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/BottleGlass.java" afterPath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/BottleGlass.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Box.java" afterPath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Box.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Can.java" afterPath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Can.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Cooler.java" afterPath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Cooler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen.java" afterPath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen2.java" afterPath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen2.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen3.java" afterPath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen3.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen4.java" afterPath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen4.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/gauge/Gauge.java" afterPath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/gauge/Gauge.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/HomeScreen.java" afterPath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/HomeScreen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/character/Mike.java" afterPath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/character/Mike.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/PlasticBottle.java" afterPath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/PlasticBottle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/PlasticGlass.java" afterPath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/PlasticGlass.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/SettingScreen.java" afterPath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/SettingScreen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Trash.java" afterPath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Trash.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Tv.java" afterPath="$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Tv.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="game01.iws" />
@@ -31,12 +142,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GameScreen.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GameScreen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45363408" vertical-offset="15850" max-vertical-offset="22678">
-              <caret line="1007" column="14" selection-start-line="1007" selection-start-column="14" selection-end-line="1007" selection-end-column="14" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="6682" max-vertical-offset="22542">
+              <caret line="407" column="43" selection-start-line="407" selection-start-column="43" selection-end-line="407" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2762#2769#0" expanded="true" />
+                <element signature="e#2884#2897#0" expanded="true" />
+                <element signature="e#2964#2979#0" expanded="true" />
+                <element signature="e#3028#3034#0" expanded="true" />
+                <element signature="e#3099#3113#0" expanded="true" />
+                <element signature="e#3218#3226#0" expanded="true" />
+                <element signature="e#3317#3324#0" expanded="true" />
+                <element signature="e#3465#3478#0" expanded="true" />
+                <element signature="e#3568#3583#0" expanded="true" />
+                <element signature="e#3656#3662#0" expanded="true" />
+                <element signature="e#3742#3756#0" expanded="true" />
+                <element signature="e#3898#3906#0" expanded="true" />
+                <element signature="e#4140#4148#0" expanded="true" />
+                <element signature="e#4314#4330#0" expanded="true" />
+                <element signature="e#4473#4487#0" expanded="true" />
+                <element signature="e#7484#7657#0" expanded="true" />
+                <element signature="e#7656#7657#0" expanded="true" />
+                <element signature="e#7983#8541#0" expanded="true" />
+                <element signature="e#8540#8541#0" expanded="true" />
+                <element signature="e#8852#9022#0" expanded="true" />
+                <element signature="e#9021#9022#0" expanded="true" />
+                <element signature="e#9326#9496#0" expanded="true" />
+                <element signature="e#9495#9496#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -44,12 +180,9 @@
       <file leaf-file-name="GameScreen2.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1887" max-vertical-offset="22729">
-              <caret line="158" column="22" selection-start-line="0" selection-start-column="0" selection-end-line="1392" selection-end-column="0" />
-              <folding>
-                <element signature="e#6713#6897#0" expanded="true" />
-                <element signature="e#6896#6897#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="5538" max-vertical-offset="22746">
+              <caret line="401" column="43" selection-start-line="401" selection-start-column="43" selection-end-line="401" selection-end-column="43" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -57,12 +190,9 @@
       <file leaf-file-name="GameScreen3.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen3.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1734" max-vertical-offset="22729">
-              <caret line="158" column="22" selection-start-line="0" selection-start-column="0" selection-end-line="1392" selection-end-column="0" />
-              <folding>
-                <element signature="e#6713#6897#0" expanded="true" />
-                <element signature="e#6896#6897#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="5640" max-vertical-offset="22984">
+              <caret line="401" column="26" selection-start-line="401" selection-start-column="22" selection-end-line="401" selection-end-column="26" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -70,30 +200,38 @@
       <file leaf-file-name="GameScreen4.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen4.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1122" max-vertical-offset="22729">
-              <caret line="158" column="22" selection-start-line="158" selection-start-column="22" selection-end-line="158" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="5198" max-vertical-offset="22746">
+              <caret line="386" column="38" selection-start-line="386" selection-start-column="38" selection-end-line="387" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomeScreen.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/HomeScreen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8295739" vertical-offset="1063" max-vertical-offset="2244">
+              <caret line="82" column="11" selection-start-line="82" selection-start-column="11" selection-end-line="82" selection-end-column="11" />
               <folding>
-                <element signature="e#6713#6897#0" expanded="true" />
-                <element signature="e#6896#6897#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#2060#2464#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LevelScreen.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/LevelScreen.java">
+      <file leaf-file-name="SettingScreen.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/SettingScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="2108">
-              <caret line="94" column="33" selection-start-line="94" selection-start-column="33" selection-end-line="94" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="536" max-vertical-offset="1377">
+              <caret line="62" column="50" selection-start-line="62" selection-start-column="50" selection-end-line="62" selection-end-column="50" />
               <folding>
-                <element signature="e#1745#1887#0" expanded="true" />
-                <element signature="e#1886#1887#0" expanded="true" />
-                <element signature="e#2076#2236#0" expanded="true" />
-                <element signature="e#2235#2236#0" expanded="true" />
-                <element signature="e#2425#2585#0" expanded="true" />
-                <element signature="e#2584#2585#0" expanded="true" />
-                <element signature="e#2774#2934#0" expanded="true" />
-                <element signature="e#2933#2934#0" expanded="true" />
+                <element signature="e#1397#1622#0" expanded="true" />
+                <element signature="e#1621#1622#0" expanded="true" />
+                <element signature="e#1831#2057#0" expanded="true" />
+                <element signature="e#2056#2057#0" expanded="true" />
+                <element signature="e#2092#2244#0" expanded="true" />
+                <element signature="e#2243#2244#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -108,21 +246,24 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/core/pom.xml" />
-        <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/character/Mike.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/HomeScreen.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/LevelScreen.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/BottleGlass.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Can.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Cooler.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/PlasticBottle.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/PlasticGlass.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Box.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Tv.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Trash.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/character/Mike.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/gauge/Gauge.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Book.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen2.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Box.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Cooler.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Tv.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen3.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen4.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/LevelScreen.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/SettingScreen.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen2.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen4.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/sut/game01/core/HomeScreen.java" />
       </list>
     </option>
   </component>
@@ -162,7 +303,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -225,8 +365,111 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game01" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NullScreen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trash" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game01" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NullScreen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gauge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game01" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NullScreen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="character" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -244,6 +487,8 @@
     <property name="FullScreen" value="false" />
     <property name="LayoutCode.rearrangeEntriesXML" value="false" />
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
   <component name="RunManager" selected="Maven.Unnamed">
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -498,7 +743,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32755905" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32755905" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12371889" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -531,7 +776,16 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Trash.java</url>
+          <line>2</line>
+          <properties />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -539,11 +793,141 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="21709" max-vertical-offset="23545">
+          <caret line="1300" column="18" selection-start-line="1300" selection-start-column="18" selection-end-line="1300" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="22644">
+          <caret line="59" column="35" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2762#2769#0" expanded="true" />
+            <element signature="e#2884#2897#0" expanded="true" />
+            <element signature="e#2964#2979#0" expanded="true" />
+            <element signature="e#3028#3034#0" expanded="true" />
+            <element signature="e#3099#3113#0" expanded="true" />
+            <element signature="e#3218#3226#0" expanded="true" />
+            <element signature="e#3317#3324#0" expanded="true" />
+            <element signature="e#3465#3478#0" expanded="true" />
+            <element signature="e#3568#3583#0" expanded="true" />
+            <element signature="e#3656#3662#0" expanded="true" />
+            <element signature="e#3742#3756#0" expanded="true" />
+            <element signature="e#3898#3906#0" expanded="true" />
+            <element signature="e#4140#4148#0" expanded="true" />
+            <element signature="e#4314#4330#0" expanded="true" />
+            <element signature="e#4473#4487#0" expanded="true" />
+            <element signature="e#7484#7657#0" expanded="true" />
+            <element signature="e#7656#7657#0" expanded="true" />
+            <element signature="e#7983#8541#0" expanded="true" />
+            <element signature="e#8540#8541#0" expanded="true" />
+            <element signature="e#8852#9022#0" expanded="true" />
+            <element signature="e#9021#9022#0" expanded="true" />
+            <element signature="e#9326#9496#0" expanded="true" />
+            <element signature="e#9495#9496#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="22865">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2499" max-vertical-offset="22644">
+          <caret line="188" column="33" selection-start-line="188" selection-start-column="33" selection-end-line="188" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Tv.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1590" max-vertical-offset="2193">
+          <caret line="139" column="33" selection-start-line="139" selection-start-column="33" selection-end-line="139" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1292" max-vertical-offset="22644">
+          <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2762#2769#0" expanded="true" />
+            <element signature="e#2884#2897#0" expanded="true" />
+            <element signature="e#2964#2979#0" expanded="true" />
+            <element signature="e#3028#3034#0" expanded="true" />
+            <element signature="e#3099#3113#0" expanded="true" />
+            <element signature="e#3218#3226#0" expanded="true" />
+            <element signature="e#3317#3324#0" expanded="true" />
+            <element signature="e#3465#3478#0" expanded="true" />
+            <element signature="e#3568#3583#0" expanded="true" />
+            <element signature="e#3656#3662#0" expanded="true" />
+            <element signature="e#3742#3756#0" expanded="true" />
+            <element signature="e#3898#3906#0" expanded="true" />
+            <element signature="e#4140#4148#0" expanded="true" />
+            <element signature="e#4314#4330#0" expanded="true" />
+            <element signature="e#4473#4487#0" expanded="true" />
+            <element signature="e#7484#7657#0" expanded="true" />
+            <element signature="e#7656#7657#0" expanded="true" />
+            <element signature="e#7983#8541#0" expanded="true" />
+            <element signature="e#8540#8541#0" expanded="true" />
+            <element signature="e#8852#9022#0" expanded="true" />
+            <element signature="e#9021#9022#0" expanded="true" />
+            <element signature="e#9326#9496#0" expanded="true" />
+            <element signature="e#9495#9496#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="22865">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="22423">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2762#2769#0" expanded="true" />
+            <element signature="e#2884#2897#0" expanded="true" />
+            <element signature="e#2964#2979#0" expanded="true" />
+            <element signature="e#3028#3034#0" expanded="true" />
+            <element signature="e#3099#3113#0" expanded="true" />
+            <element signature="e#3218#3226#0" expanded="true" />
+            <element signature="e#3317#3324#0" expanded="true" />
+            <element signature="e#3465#3478#0" expanded="true" />
+            <element signature="e#3568#3583#0" expanded="true" />
+            <element signature="e#3656#3662#0" expanded="true" />
+            <element signature="e#3742#3756#0" expanded="true" />
+            <element signature="e#3898#3906#0" expanded="true" />
+            <element signature="e#4140#4148#0" expanded="true" />
+            <element signature="e#4314#4330#0" expanded="true" />
+            <element signature="e#4473#4487#0" expanded="true" />
+            <element signature="e#7484#7657#0" expanded="true" />
+            <element signature="e#7656#7657#0" expanded="true" />
+            <element signature="e#7983#8541#0" expanded="true" />
+            <element signature="e#8540#8541#0" expanded="true" />
+            <element signature="e#8852#9022#0" expanded="true" />
+            <element signature="e#9021#9022#0" expanded="true" />
+            <element signature="e#9326#9496#0" expanded="true" />
+            <element signature="e#9495#9496#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -565,9 +949,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2227">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -582,9 +963,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2227">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -599,9 +977,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1063" max-vertical-offset="2227">
           <caret line="99" column="66" selection-start-line="99" selection-start-column="66" selection-end-line="99" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -616,9 +991,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2227">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -640,9 +1012,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4318">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -696,30 +1065,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/MyGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36090225" vertical-offset="179" max-vertical-offset="578">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/character/Mike.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.51235586" vertical-offset="1620" max-vertical-offset="2227">
-          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/HomeScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.3233085" vertical-offset="1148" max-vertical-offset="3077">
-          <caret line="173" column="42" selection-start-line="173" selection-start-column="42" selection-end-line="173" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/TestScreen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="697">
@@ -727,133 +1072,208 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Box.java">
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/LevelScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1369" max-vertical-offset="1972">
-          <caret line="123" column="17" selection-start-line="123" selection-start-column="17" selection-end-line="123" selection-end-column="17" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="2108">
+          <caret line="94" column="33" selection-start-line="94" selection-start-column="33" selection-end-line="94" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Trash.java">
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/gauge/Gauge.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1972">
-          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Tv.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1420" max-vertical-offset="1972">
-          <caret line="123" column="17" selection-start-line="123" selection-start-column="17" selection-end-line="123" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Can.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1439" max-vertical-offset="1972">
-          <caret line="123" column="17" selection-start-line="123" selection-start-column="17" selection-end-line="123" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Cooler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1445" max-vertical-offset="1972">
-          <caret line="123" column="17" selection-start-line="123" selection-start-column="17" selection-end-line="123" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/PlasticBottle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1389" max-vertical-offset="1972">
-          <caret line="123" column="17" selection-start-line="123" selection-start-column="17" selection-end-line="123" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/PlasticGlass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1490" max-vertical-offset="1972">
-          <caret line="123" column="17" selection-start-line="123" selection-start-column="17" selection-end-line="123" selection-end-column="17" />
-          <folding />
+        <state vertical-scroll-proportion="0.31829575" vertical-offset="1182" max-vertical-offset="1683">
+          <caret line="101" column="23" selection-start-line="101" selection-start-column="23" selection-end-line="101" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Book.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1369" max-vertical-offset="1972">
-          <caret line="123" column="17" selection-start-line="123" selection-start-column="17" selection-end-line="123" selection-end-column="17" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1382" max-vertical-offset="2193">
+          <caret line="135" column="17" selection-start-line="135" selection-start-column="17" selection-end-line="135" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/BottleGlass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35584843" vertical-offset="1365" max-vertical-offset="1972">
-          <caret line="123" column="18" selection-start-line="123" selection-start-column="18" selection-end-line="123" selection-end-column="18" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="400" max-vertical-offset="2193">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen3.java">
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Box.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1734" max-vertical-offset="22729">
-          <caret line="158" column="22" selection-start-line="0" selection-start-column="0" selection-end-line="1392" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1471" max-vertical-offset="2176">
+          <caret line="134" column="18" selection-start-line="134" selection-start-column="18" selection-end-line="134" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Can.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="451" max-vertical-offset="2193">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Cooler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1586" max-vertical-offset="2193">
+          <caret line="135" column="17" selection-start-line="135" selection-start-column="17" selection-end-line="135" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/PlasticBottle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1471" max-vertical-offset="2193">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/PlasticGlass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1586" max-vertical-offset="2193">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Trash.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.5485997" vertical-offset="2011" max-vertical-offset="2618">
+          <caret line="63" column="34" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="34" />
           <folding>
-            <element signature="e#6713#6897#0" expanded="true" />
-            <element signature="e#6896#6897#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/LevelScreen.java">
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/trash/Tv.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="2108">
-          <caret line="94" column="33" selection-start-line="94" selection-start-column="33" selection-end-line="94" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1590" max-vertical-offset="2193">
+          <caret line="139" column="33" selection-start-line="139" selection-start-column="33" selection-end-line="139" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/character/Mike.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.3859649" vertical-offset="2287" max-vertical-offset="3961">
+          <caret line="242" column="68" selection-start-line="242" selection-start-column="68" selection-end-line="242" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/EndScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.0050125" vertical-offset="1301" max-vertical-offset="1700">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/OverScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.042606518" vertical-offset="102" max-vertical-offset="1717">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/googlecode/playn/playn-java/1.9/playn-java-1.9.jar!/playn/java/JavaCanvas.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.32" vertical-offset="1380" max-vertical-offset="4301">
+          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/MyGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42606518" vertical-offset="153" max-vertical-offset="595">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/SettingScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="536" max-vertical-offset="1377">
+          <caret line="62" column="50" selection-start-line="62" selection-start-column="50" selection-end-line="62" selection-end-column="50" />
           <folding>
-            <element signature="e#1745#1887#0" expanded="true" />
-            <element signature="e#1886#1887#0" expanded="true" />
-            <element signature="e#2076#2236#0" expanded="true" />
-            <element signature="e#2235#2236#0" expanded="true" />
-            <element signature="e#2425#2585#0" expanded="true" />
-            <element signature="e#2584#2585#0" expanded="true" />
-            <element signature="e#2774#2934#0" expanded="true" />
-            <element signature="e#2933#2934#0" expanded="true" />
+            <element signature="e#1397#1622#0" expanded="true" />
+            <element signature="e#1621#1622#0" expanded="true" />
+            <element signature="e#1831#2057#0" expanded="true" />
+            <element signature="e#2056#2057#0" expanded="true" />
+            <element signature="e#2092#2244#0" expanded="true" />
+            <element signature="e#2243#2244#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen4.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/googlecode/playn/playn-core/1.9/playn-core-1.9.jar!/playn/core/gl/GLShader.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1122" max-vertical-offset="22729">
-          <caret line="158" column="22" selection-start-line="158" selection-start-column="22" selection-end-line="158" selection-end-column="22" />
+        <state vertical-scroll-proportion="4.33241" vertical-offset="0" max-vertical-offset="3621">
+          <caret line="104" column="37" selection-start-line="104" selection-start-column="37" selection-end-line="104" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="6682" max-vertical-offset="22542">
+          <caret line="407" column="43" selection-start-line="407" selection-start-column="43" selection-end-line="407" selection-end-column="43" />
           <folding>
-            <element signature="e#6713#6897#0" expanded="true" />
-            <element signature="e#6896#6897#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2762#2769#0" expanded="true" />
+            <element signature="e#2884#2897#0" expanded="true" />
+            <element signature="e#2964#2979#0" expanded="true" />
+            <element signature="e#3028#3034#0" expanded="true" />
+            <element signature="e#3099#3113#0" expanded="true" />
+            <element signature="e#3218#3226#0" expanded="true" />
+            <element signature="e#3317#3324#0" expanded="true" />
+            <element signature="e#3465#3478#0" expanded="true" />
+            <element signature="e#3568#3583#0" expanded="true" />
+            <element signature="e#3656#3662#0" expanded="true" />
+            <element signature="e#3742#3756#0" expanded="true" />
+            <element signature="e#3898#3906#0" expanded="true" />
+            <element signature="e#4140#4148#0" expanded="true" />
+            <element signature="e#4314#4330#0" expanded="true" />
+            <element signature="e#4473#4487#0" expanded="true" />
+            <element signature="e#7484#7657#0" expanded="true" />
+            <element signature="e#7656#7657#0" expanded="true" />
+            <element signature="e#7983#8541#0" expanded="true" />
+            <element signature="e#8540#8541#0" expanded="true" />
+            <element signature="e#8852#9022#0" expanded="true" />
+            <element signature="e#9021#9022#0" expanded="true" />
+            <element signature="e#9326#9496#0" expanded="true" />
+            <element signature="e#9495#9496#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1887" max-vertical-offset="22729">
-          <caret line="158" column="22" selection-start-line="0" selection-start-column="0" selection-end-line="1392" selection-end-column="0" />
-          <folding>
-            <element signature="e#6713#6897#0" expanded="true" />
-            <element signature="e#6896#6897#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="5538" max-vertical-offset="22746">
+          <caret line="401" column="43" selection-start-line="401" selection-start-column="43" selection-end-line="401" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen.java">
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen3.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45363408" vertical-offset="15850" max-vertical-offset="22678">
-          <caret line="1007" column="14" selection-start-line="1007" selection-start-column="14" selection-end-line="1007" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="5640" max-vertical-offset="22984">
+          <caret line="401" column="26" selection-start-line="401" selection-start-column="22" selection-end-line="401" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/GameScreen4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5198" max-vertical-offset="22746">
+          <caret line="386" column="38" selection-start-line="386" selection-start-column="38" selection-end-line="387" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/sut/game01/core/HomeScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8295739" vertical-offset="1063" max-vertical-offset="2380">
+          <caret line="82" column="11" selection-start-line="82" selection-start-column="11" selection-end-line="82" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2060#2464#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

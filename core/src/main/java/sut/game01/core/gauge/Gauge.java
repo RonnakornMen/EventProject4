@@ -10,6 +10,9 @@ import playn.core.ImageLayer;
 import playn.core.Mouse;
 import playn.core.PlayN;
 import sut.game01.core.GameScreen;
+import sut.game01.core.GameScreen2;
+import sut.game01.core.GameScreen3;
+import sut.game01.core.GameScreen4;
 import tripleplay.game.Screen;
 import react.UnitSlot;
 import tripleplay.game.UIScreen;
@@ -96,6 +99,9 @@ public class Gauge   {
                 num=0;
                 //System.out.println(num2);
                 GameScreen.powerMethod(num2);
+                GameScreen2.powerMethod(num2);
+                GameScreen3.powerMethod(num2);
+                GameScreen4.powerMethod(num2);
             }
 
             spriteIndex = offset + ((spriteIndex +1 ) %11);

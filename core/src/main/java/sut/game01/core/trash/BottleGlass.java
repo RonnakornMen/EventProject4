@@ -13,8 +13,7 @@ import playn.core.ImageLayer;
 import playn.core.ImageLayer;
 import playn.core.Mouse;
 import playn.core.PlayN;
-import sut.game01.core.GameScreen;
-import sut.game01.core.HomeScreen;
+import sut.game01.core.*;
 import tripleplay.game.Screen;
 import react.UnitSlot;
 import tripleplay.game.UIScreen;
@@ -64,6 +63,7 @@ public class BottleGlass {
                 body = initPhysicsBody(world,
                         GameScreen.M_PER_PIXEL * x_px,
                         GameScreen.M_PER_PIXEL * y_px);
+
                 hasLoaded = true;
             }
 
@@ -107,6 +107,18 @@ public class BottleGlass {
         sprite.layer().setTranslation(
                 (body.getPosition().x /GameScreen.M_PER_PIXEL) +0,
                 body.getPosition().y / GameScreen.M_PER_PIXEL);
+
+        sprite.layer().setTranslation(
+                (body.getPosition().x / GameScreen2.M_PER_PIXEL) +0,
+                body.getPosition().y / GameScreen2.M_PER_PIXEL);
+
+        sprite.layer().setTranslation(
+                (body.getPosition().x / GameScreen3.M_PER_PIXEL) +0,
+                body.getPosition().y / GameScreen3.M_PER_PIXEL);
+
+        sprite.layer().setTranslation(
+                (body.getPosition().x / GameScreen4.M_PER_PIXEL) +0,
+                body.getPosition().y / GameScreen4.M_PER_PIXEL);
 
     }
     private Body initPhysicsBody(World world, float x, float y) {

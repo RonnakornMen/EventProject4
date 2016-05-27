@@ -13,8 +13,7 @@ import playn.core.ImageLayer;
 import playn.core.ImageLayer;
 import playn.core.Mouse;
 import playn.core.PlayN;
-import sut.game01.core.GameScreen;
-import sut.game01.core.HomeScreen;
+import sut.game01.core.*;
 import sut.game01.core.gauge.Gauge;
 import tripleplay.game.Screen;
 import react.UnitSlot;
@@ -243,6 +242,9 @@ public class Mike   {
                 body.getPosition().y / GameScreen.M_PER_PIXEL);
         //sprite.layer().setRotation(( (float) angle / 30f) - 2.9f);
         GameScreen.recivePosition(body.getPosition().x / GameScreen.M_PER_PIXEL + 10, body.getPosition().y / GameScreen.M_PER_PIXEL);
+        GameScreen2.recivePosition(body.getPosition().x / GameScreen.M_PER_PIXEL + 10, body.getPosition().y / GameScreen.M_PER_PIXEL);
+        GameScreen3.recivePosition(body.getPosition().x / GameScreen.M_PER_PIXEL + 10, body.getPosition().y / GameScreen.M_PER_PIXEL);
+        GameScreen4.recivePosition(body.getPosition().x / GameScreen.M_PER_PIXEL + 10, body.getPosition().y / GameScreen.M_PER_PIXEL);
     }
     public String getInfo(){
         return String.valueOf(layer().rotation());

@@ -55,6 +55,7 @@ public class GameScreen extends Screen {
     private final ImageLayer backButton;
     private final ImageLayer settingButton;
     private final ImageLayer pauseButton;
+
     private final ImageLayer overButton;
     private final ImageLayer endButton;
     private final ImageLayer cloud;
@@ -69,7 +70,8 @@ public class GameScreen extends Screen {
     private Image cloudImage;
     private float xC = 24.0f;
     private float yC = 100;
-
+    static ImageLayer pauseStage;
+    boolean pause = false;
     private final ImageLayer wall;
     private Mike mike;
     private Gauge gauge;
@@ -85,6 +87,8 @@ public class GameScreen extends Screen {
     static float xMike2;
     static float yMike2;
     static float power;
+    static int count =0;
+
     ArrayList<Trash> tRemove =new ArrayList<Trash>();
     ArrayList<Can> canRemove =new ArrayList<Can>();
     ArrayList<BottleGlass> bottleGlassRemove =new ArrayList<BottleGlass>();
@@ -130,12 +134,14 @@ public class GameScreen extends Screen {
     public static HashMap<String, Body> bodiesYellowbin = new HashMap<String, Body>();
     public static HashMap<String, Body> bodiesGreenbin = new HashMap<String, Body>();*/
     private String debugString = String.valueOf(bodies);
-    private String strScore;
-    private String strTime;
+
+
     int score =0;
     int time =60;
+    private String strTime = "" + time;
     int time2;
-    int targetScore =100;
+    int targetScore =30;
+    private String strScore = "Score = " + score + "/" + targetScore;
 
     public static float M_PER_PIXEL = 1 / 26.666667f;
     private static int width = 24;
@@ -200,6 +206,10 @@ public class GameScreen extends Screen {
         backButton.addListener(new Mouse.LayerAdapter() {
             @Override
             public void onMouseUp(Mouse.ButtonEvent event) {
+                timeI = 0;
+                time = 60;
+                score =0;
+                debugDraw.getCanvas().clear();
                 ss.remove(ss.top()); // pop screen
             }
         });
@@ -219,10 +229,21 @@ public class GameScreen extends Screen {
         this.pauseButton = graphics().createImageLayer(pauseImage);
         pauseButton.setTranslation(270, 0);
 
+
+
         pauseButton.addListener(new Mouse.LayerAdapter() {
             @Override
             public void onMouseUp(Mouse.ButtonEvent event) {
-                // ss.push(overScreen);
+                pause = !pause;
+                if(pause == true){
+                    Image pauseImage2 = assets().getImage("images/pause.png");
+                    pauseStage = graphics().createImageLayer(pauseImage2);
+                    pauseStage.setTranslation(120, 120);
+                    layer.add(pauseStage);
+                }
+                if(pause == false)
+                    pauseStage.setVisible(false);
+
             }
         });
 
@@ -246,6 +267,7 @@ public class GameScreen extends Screen {
             @Override
             public void onMouseUp(Mouse.ButtonEvent event) {
                 ss.push(endScreen);
+
             }
         });
         //==========================================================================clound
@@ -283,7 +305,7 @@ public class GameScreen extends Screen {
         //===========================================================================nextWindows
         Image nextWindowsImage = assets().getImage("images/scoreWindows.png");
         this.nextWindows = graphics().createImageLayer(nextWindowsImage);
-        nextWindows.setTranslation(10, 30);
+        nextWindows.setTranslation(480, 70);
         //===========================================================================nextWindows
         Image windWindowsImage = assets().getImage("images/windWindows.png");
         this.windWindows = graphics().createImageLayer(windWindowsImage);
@@ -312,7 +334,7 @@ public class GameScreen extends Screen {
     public void wasShown() {
         super.wasShown();
         this.layer.add(bg);
-        //this.layer.add(backButton);
+        this.layer.add(backButton);
         //this.layer.add(settingButton);
         //this.layer.add(mario);
         this.layer.add(pauseButton);
@@ -381,9 +403,9 @@ public class GameScreen extends Screen {
             debugDraw.setStrokeAlpha(150);
             debugDraw.setFillAlpha(75);
             debugDraw.setStrokeWidth(2.0f);
-           debugDraw.setFlags(DebugDraw.e_shapeBit |
+           /*debugDraw.setFlags(DebugDraw.e_shapeBit |
                     DebugDraw.e_jointBit |
-                    DebugDraw.e_aabbBit);
+                    DebugDraw.e_aabbBit);*/
 
             debugDraw.setCamera(0, 0, 1f / M_PER_PIXEL);
             world.setDebugDraw(debugDraw);
@@ -505,6 +527,7 @@ public class GameScreen extends Screen {
 
     @Override
     public void update(int delta) {
+        if(!pause){
         super.update(delta);
         mike.update(delta);
         gauge.update(delta);
@@ -512,14 +535,13 @@ public class GameScreen extends Screen {
         yellowBin.update(delta);
         greenBin.update(delta);*/
         move();
-        time = 60-(timeI/40);
+        time = 60 - (timeI / 40);
         timeI++;
-        if(time ==0) {
+        if (time == 0) {
             checkScore();
         }
-        strTime = ""+ time;
-        strScore = "Score = "+score+"/"+targetScore;
-
+        strTime = "" + time;
+        strScore = "Score = " + score + "/" + targetScore;
 
 
         world.step(0.033f, 10, 10);
@@ -586,7 +608,7 @@ public class GameScreen extends Screen {
                 // System.out.println("b = "+bodies.get(b));
                 if ((contact.getFixtureA().getBody() == mike.getBody())) {
                     //System.out.println(power);
-                    b.applyForce(new Vec2(power, -150f), b.getPosition());
+                    b.applyForce(new Vec2(power, -165f), b.getPosition());
                     for (Body b1 : bodiesGround.values()) {
                         if (b1 == b)
                             System.out.println("contact ground");
@@ -607,17 +629,14 @@ public class GameScreen extends Screen {
                 }
 
 
-
-
-               for (Trash trash: t) {
+                for (Trash trash : t) {
                     if ((contact.getFixtureA().getBody() == trash.getBody() && "blueBin" == bodies.get(b)) ||
                             (contact.getFixtureA().getBody() == trash.getBody() && "yellowBin" == bodies.get(b)) ||
-                            (contact.getFixtureA().getBody() == trash.getBody() && "greenBin" == bodies.get(b))||
+                            (contact.getFixtureA().getBody() == trash.getBody() && "greenBin" == bodies.get(b)) ||
                             (contact.getFixtureA().getBody() == trash.getBody() && "ground2" == bodies.get(b))) {
-                        if ("ground2" != bodies.get(b)&&"blueBin" == bodies.get(b)){
+                        if ("ground2" != bodies.get(b) && "blueBin" == bodies.get(b)) {
                             score += 10;
-                        }
-                        else if("yellowBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
+                        } else if ("yellowBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
                             if (score > 0)
                                 score -= 5;
                         }
@@ -628,12 +647,11 @@ public class GameScreen extends Screen {
                     }
                     if ((contact.getFixtureB().getBody() == trash.getBody() && "blueBin" == bodies.get(a)) ||
                             (contact.getFixtureB().getBody() == trash.getBody() && "yellowBin" == bodies.get(a)) ||
-                            (contact.getFixtureB().getBody() == trash.getBody() && "greenBin" == bodies.get(a))||
+                            (contact.getFixtureB().getBody() == trash.getBody() && "greenBin" == bodies.get(a)) ||
                             (contact.getFixtureB().getBody() == trash.getBody() && "ground2" == bodies.get(a))) {
-                        if ("ground2" != bodies.get(b)&&"blueBin" == bodies.get(b)){
+                        if ("ground2" != bodies.get(b) && "blueBin" == bodies.get(b)) {
                             score += 10;
-                        }
-                        else if("yellowBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
+                        } else if ("yellowBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
                             if (score > 0)
                                 score -= 5;
                         }
@@ -642,52 +660,49 @@ public class GameScreen extends Screen {
                         tRemove.add(trash);
 
                     }
-                   //System.out.println("trash = " + trashNum);
-                   trashNum++;
+                    //System.out.println("trash = " + trashNum);
+                    trashNum++;
                 }
-                for (Can can2: can) {
+                for (Can can2 : can) {
                     if ((contact.getFixtureA().getBody() == can2.getBody() && "blueBin" == bodies.get(b)) ||
                             (contact.getFixtureA().getBody() == can2.getBody() && "yellowBin" == bodies.get(b)) ||
-                            (contact.getFixtureA().getBody() == can2.getBody() && "greenBin" == bodies.get(b))||
+                            (contact.getFixtureA().getBody() == can2.getBody() && "greenBin" == bodies.get(b)) ||
                             (contact.getFixtureA().getBody() == can2.getBody() && "ground2" == bodies.get(b))) {
-                        if ("ground2" != bodies.get(b)&&"yellowBin" == bodies.get(b)){
+                        if ("ground2" != bodies.get(b) && "yellowBin" == bodies.get(b)) {
                             score += 10;
-                        }
-                        else if("blueBin" == bodies.get(b) || "greenBin" == bodies.get(b)){
+                        } else if ("blueBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
                             if (score > 0)
-                                score -=5;
+                                score -= 5;
                         }
-                       can2.layer().destroy();
-                       canRemove.add(can2);
+                        can2.layer().destroy();
+                        canRemove.add(can2);
 
                     }
                     if ((contact.getFixtureB().getBody() == can2.getBody() && "blueBin" == bodies.get(a)) ||
                             (contact.getFixtureB().getBody() == can2.getBody() && "yellowBin" == bodies.get(a)) ||
-                            (contact.getFixtureB().getBody() == can2.getBody() && "greenBin" == bodies.get(a))||
+                            (contact.getFixtureB().getBody() == can2.getBody() && "greenBin" == bodies.get(a)) ||
                             (contact.getFixtureB().getBody() == can2.getBody() && "ground2" == bodies.get(a))) {
-                        if ("ground2" != bodies.get(b)&&"yellowBin" == bodies.get(b)){
+                        if ("ground2" != bodies.get(b) && "yellowBin" == bodies.get(b)) {
                             score += 10;
-                        }
-                        else if("blueBin" == bodies.get(b) || "greenBin" == bodies.get(b)){
+                        } else if ("blueBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
                             if (score > 0)
-                                score -=5;
+                                score -= 5;
                         }
                         can2.layer().destroy();
                         canRemove.add(can2);
 
                     }
                 }
-                for (BottleGlass bottleGlass2: bottleGlass) {
+                for (BottleGlass bottleGlass2 : bottleGlass) {
                     if ((contact.getFixtureA().getBody() == bottleGlass2.getBody() && "blueBin" == bodies.get(b)) ||
                             (contact.getFixtureA().getBody() == bottleGlass2.getBody() && "yellowBin" == bodies.get(b)) ||
-                            (contact.getFixtureA().getBody() == bottleGlass2.getBody() && "greenBin" == bodies.get(b))||
+                            (contact.getFixtureA().getBody() == bottleGlass2.getBody() && "greenBin" == bodies.get(b)) ||
                             (contact.getFixtureA().getBody() == bottleGlass2.getBody() && "ground2" == bodies.get(b))) {
-                        if ("ground2" != bodies.get(b)&&"greenBin" == bodies.get(b)){
+                        if ("ground2" != bodies.get(b) && "greenBin" == bodies.get(b)) {
                             score += 10;
-                        }
-                        else if("blueBin" == bodies.get(b) || "yellowBin" == bodies.get(b)){
+                        } else if ("blueBin" == bodies.get(b) || "yellowBin" == bodies.get(b)) {
                             if (score > 0)
-                                score -=5;
+                                score -= 5;
                         }
                         bottleGlass2.layer().destroy();
                         bottleGlassRemove.add(bottleGlass2);
@@ -695,14 +710,13 @@ public class GameScreen extends Screen {
                     }
                     if ((contact.getFixtureB().getBody() == bottleGlass2.getBody() && "blueBin" == bodies.get(a)) ||
                             (contact.getFixtureB().getBody() == bottleGlass2.getBody() && "yellowBin" == bodies.get(a)) ||
-                            (contact.getFixtureB().getBody() == bottleGlass2.getBody() && "greenBin" == bodies.get(a))||
+                            (contact.getFixtureB().getBody() == bottleGlass2.getBody() && "greenBin" == bodies.get(a)) ||
                             (contact.getFixtureB().getBody() == bottleGlass2.getBody() && "ground2" == bodies.get(a))) {
-                        if ("ground2" != bodies.get(b)&&"greenBin" == bodies.get(b)){
+                        if ("ground2" != bodies.get(b) && "greenBin" == bodies.get(b)) {
                             score += 10;
-                        }
-                        else if("blueBin" == bodies.get(b) || "yellowBin" == bodies.get(b)){
+                        } else if ("blueBin" == bodies.get(b) || "yellowBin" == bodies.get(b)) {
                             if (score > 0)
-                                score -=5;
+                                score -= 5;
                         }
                         bottleGlass2.layer().destroy();
                         bottleGlassRemove.add(bottleGlass2);
@@ -711,17 +725,16 @@ public class GameScreen extends Screen {
                     }
 
                 }
-                for (PlasticBottle plasticBottle2: plasticBottle) {
+                for (PlasticBottle plasticBottle2 : plasticBottle) {
                     if ((contact.getFixtureA().getBody() == plasticBottle2.getBody() && "blueBin" == bodies.get(b)) ||
                             (contact.getFixtureA().getBody() == plasticBottle2.getBody() && "yellowBin" == bodies.get(b)) ||
-                            (contact.getFixtureA().getBody() == plasticBottle2.getBody() && "greenBin" == bodies.get(b))||
+                            (contact.getFixtureA().getBody() == plasticBottle2.getBody() && "greenBin" == bodies.get(b)) ||
                             (contact.getFixtureA().getBody() == plasticBottle2.getBody() && "ground2" == bodies.get(b))) {
-                        if ("ground2" != bodies.get(b)&&"yellowBin" == bodies.get(b)){
+                        if ("ground2" != bodies.get(b) && "yellowBin" == bodies.get(b)) {
                             score += 10;
-                        }
-                        else if("blueBin" == bodies.get(b) || "greenBin" == bodies.get(b)){
+                        } else if ("blueBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
                             if (score > 0)
-                                score -=5;
+                                score -= 5;
                         }
                         plasticBottle2.layer().destroy();
                         plasticBottleRemove.add(plasticBottle2);
@@ -729,14 +742,13 @@ public class GameScreen extends Screen {
                     }
                     if ((contact.getFixtureB().getBody() == plasticBottle2.getBody() && "blueBin" == bodies.get(a)) ||
                             (contact.getFixtureB().getBody() == plasticBottle2.getBody() && "yellowBin" == bodies.get(a)) ||
-                            (contact.getFixtureB().getBody() == plasticBottle2.getBody() && "greenBin" == bodies.get(a))||
+                            (contact.getFixtureB().getBody() == plasticBottle2.getBody() && "greenBin" == bodies.get(a)) ||
                             (contact.getFixtureB().getBody() == plasticBottle2.getBody() && "ground2" == bodies.get(a))) {
-                        if ("ground2" != bodies.get(b)&&"yellowBin" == bodies.get(b)){
+                        if ("ground2" != bodies.get(b) && "yellowBin" == bodies.get(b)) {
                             score += 10;
-                        }
-                        else if("blueBin" == bodies.get(b) || "greenBin" == bodies.get(b)){
+                        } else if ("blueBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
                             if (score > 0)
-                                score -=5;
+                                score -= 5;
                         }
                         plasticBottle2.layer().destroy();
                         plasticBottleRemove.add(plasticBottle2);
@@ -745,15 +757,14 @@ public class GameScreen extends Screen {
                     }
 
                 }
-                for (Book book2: book) {
+                for (Book book2 : book) {
                     if ((contact.getFixtureA().getBody() == book2.getBody() && "blueBin" == bodies.get(b)) ||
                             (contact.getFixtureA().getBody() == book2.getBody() && "yellowBin" == bodies.get(b)) ||
-                            (contact.getFixtureA().getBody() == book2.getBody() && "greenBin" == bodies.get(b))||
+                            (contact.getFixtureA().getBody() == book2.getBody() && "greenBin" == bodies.get(b)) ||
                             (contact.getFixtureA().getBody() == book2.getBody() && "ground2" == bodies.get(b))) {
-                        if ("ground2" != bodies.get(b)&&"blueBin" == bodies.get(b)){
+                        if ("ground2" != bodies.get(b) && "blueBin" == bodies.get(b)) {
                             score += 10;
-                        }
-                        else if("yellowBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
+                        } else if ("yellowBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
                             if (score > 0)
                                 score -= 5;
                         }
@@ -763,12 +774,11 @@ public class GameScreen extends Screen {
                     }
                     if ((contact.getFixtureB().getBody() == book2.getBody() && "blueBin" == bodies.get(a)) ||
                             (contact.getFixtureB().getBody() == book2.getBody() && "yellowBin" == bodies.get(a)) ||
-                            (contact.getFixtureB().getBody() == book2.getBody() && "greenBin" == bodies.get(a))||
+                            (contact.getFixtureB().getBody() == book2.getBody() && "greenBin" == bodies.get(a)) ||
                             (contact.getFixtureB().getBody() == book2.getBody() && "ground2" == bodies.get(a))) {
-                        if ("ground2" != bodies.get(b)&&"blueBin" == bodies.get(b)){
+                        if ("ground2" != bodies.get(b) && "blueBin" == bodies.get(b)) {
                             score += 10;
-                        }
-                        else if("yellowBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
+                        } else if ("yellowBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
                             if (score > 0)
                                 score -= 5;
                         }
@@ -778,17 +788,16 @@ public class GameScreen extends Screen {
 
                     }
 
-                    for (PlasticGlass plasticGlass2: plasticGlass) {
+                    for (PlasticGlass plasticGlass2 : plasticGlass) {
                         if ((contact.getFixtureA().getBody() == plasticGlass2.getBody() && "blueBin" == bodies.get(b)) ||
                                 (contact.getFixtureA().getBody() == plasticGlass2.getBody() && "yellowBin" == bodies.get(b)) ||
-                                (contact.getFixtureA().getBody() == plasticGlass2.getBody() && "greenBin" == bodies.get(b))||
+                                (contact.getFixtureA().getBody() == plasticGlass2.getBody() && "greenBin" == bodies.get(b)) ||
                                 (contact.getFixtureA().getBody() == plasticGlass2.getBody() && "ground2" == bodies.get(b))) {
-                            if ("ground2" != bodies.get(b)&&"yellowBin" == bodies.get(b)){
+                            if ("ground2" != bodies.get(b) && "yellowBin" == bodies.get(b)) {
                                 score += 10;
-                            }
-                            else if("blueBin" == bodies.get(b) || "greenBin" == bodies.get(b)){
+                            } else if ("blueBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
                                 if (score > 0)
-                                    score -=5;
+                                    score -= 5;
                             }
                             plasticGlass2.layer().destroy();
                             plasticGlassRemove.add(plasticGlass2);
@@ -796,14 +805,13 @@ public class GameScreen extends Screen {
                         }
                         if ((contact.getFixtureB().getBody() == plasticGlass2.getBody() && "blueBin" == bodies.get(a)) ||
                                 (contact.getFixtureB().getBody() == plasticGlass2.getBody() && "yellowBin" == bodies.get(a)) ||
-                                (contact.getFixtureB().getBody() == plasticGlass2.getBody() && "greenBin" == bodies.get(a))||
+                                (contact.getFixtureB().getBody() == plasticGlass2.getBody() && "greenBin" == bodies.get(a)) ||
                                 (contact.getFixtureB().getBody() == plasticGlass2.getBody() && "ground2" == bodies.get(a))) {
-                            if ("ground2" != bodies.get(b)&&"yellowBin" == bodies.get(b)){
+                            if ("ground2" != bodies.get(b) && "yellowBin" == bodies.get(b)) {
                                 score += 10;
-                            }
-                            else if("blueBin" == bodies.get(b) || "greenBin" == bodies.get(b)){
+                            } else if ("blueBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
                                 if (score > 0)
-                                    score -=5;
+                                    score -= 5;
                             }
                             plasticGlass2.layer().destroy();
                             plasticGlassRemove.add(plasticGlass2);
@@ -811,15 +819,14 @@ public class GameScreen extends Screen {
 
                         }
                     }
-                    for (Box box2: box) {
+                    for (Box box2 : box) {
                         if ((contact.getFixtureA().getBody() == box2.getBody() && "blueBin" == bodies.get(b)) ||
                                 (contact.getFixtureA().getBody() == box2.getBody() && "yellowBin" == bodies.get(b)) ||
-                                (contact.getFixtureA().getBody() == box2.getBody() && "greenBin" == bodies.get(b))||
+                                (contact.getFixtureA().getBody() == box2.getBody() && "greenBin" == bodies.get(b)) ||
                                 (contact.getFixtureA().getBody() == box2.getBody() && "ground2" == bodies.get(b))) {
-                            if ("ground2" != bodies.get(b)&&"blueBin" == bodies.get(b)){
+                            if ("ground2" != bodies.get(b) && "blueBin" == bodies.get(b)) {
                                 score += 10;
-                            }
-                            else if("yellowBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
+                            } else if ("yellowBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
                                 if (score > 0)
                                     score -= 5;
                             }
@@ -829,12 +836,11 @@ public class GameScreen extends Screen {
                         }
                         if ((contact.getFixtureB().getBody() == box2.getBody() && "blueBin" == bodies.get(a)) ||
                                 (contact.getFixtureB().getBody() == box2.getBody() && "yellowBin" == bodies.get(a)) ||
-                                (contact.getFixtureB().getBody() == box2.getBody() && "greenBin" == bodies.get(a))||
+                                (contact.getFixtureB().getBody() == box2.getBody() && "greenBin" == bodies.get(a)) ||
                                 (contact.getFixtureB().getBody() == box2.getBody() && "ground2" == bodies.get(a))) {
-                            if ("ground2" != bodies.get(b)&&"blueBin" == bodies.get(b)){
+                            if ("ground2" != bodies.get(b) && "blueBin" == bodies.get(b)) {
                                 score += 10;
-                            }
-                            else if("yellowBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
+                            } else if ("yellowBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
                                 if (score > 0)
                                     score -= 5;
                             }
@@ -844,17 +850,16 @@ public class GameScreen extends Screen {
 
                         }
                     }
-                    for (Cooler cooler2: cooler) {
+                    for (Cooler cooler2 : cooler) {
                         if ((contact.getFixtureA().getBody() == cooler2.getBody() && "blueBin" == bodies.get(b)) ||
                                 (contact.getFixtureA().getBody() == cooler2.getBody() && "yellowBin" == bodies.get(b)) ||
-                                (contact.getFixtureA().getBody() == cooler2.getBody() && "greenBin" == bodies.get(b))||
+                                (contact.getFixtureA().getBody() == cooler2.getBody() && "greenBin" == bodies.get(b)) ||
                                 (contact.getFixtureA().getBody() == cooler2.getBody() && "ground2" == bodies.get(b))) {
-                            if ("ground2" != bodies.get(b)&&"yellowBin" == bodies.get(b)){
+                            if ("ground2" != bodies.get(b) && "yellowBin" == bodies.get(b)) {
                                 score += 10;
-                            }
-                            else if("blueBin" == bodies.get(b) || "greenBin" == bodies.get(b)){
+                            } else if ("blueBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
                                 if (score > 0)
-                                    score -=5;
+                                    score -= 5;
                             }
                             cooler2.layer().destroy();
                             coolerRemove.add(cooler2);
@@ -862,14 +867,13 @@ public class GameScreen extends Screen {
                         }
                         if ((contact.getFixtureB().getBody() == cooler2.getBody() && "blueBin" == bodies.get(a)) ||
                                 (contact.getFixtureB().getBody() == cooler2.getBody() && "yellowBin" == bodies.get(a)) ||
-                                (contact.getFixtureB().getBody() == cooler2.getBody() && "greenBin" == bodies.get(a))||
+                                (contact.getFixtureB().getBody() == cooler2.getBody() && "greenBin" == bodies.get(a)) ||
                                 (contact.getFixtureB().getBody() == cooler2.getBody() && "ground2" == bodies.get(a))) {
-                            if ("ground2" != bodies.get(b)&&"yellowBin" == bodies.get(b)){
+                            if ("ground2" != bodies.get(b) && "yellowBin" == bodies.get(b)) {
                                 score += 10;
-                            }
-                            else if("blueBin" == bodies.get(b) || "greenBin" == bodies.get(b)){
+                            } else if ("blueBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
                                 if (score > 0)
-                                    score -=5;
+                                    score -= 5;
                             }
                             cooler2.layer().destroy();
                             coolerRemove.add(cooler2);
@@ -877,17 +881,16 @@ public class GameScreen extends Screen {
 
                         }
                     }
-                    for (Tv tv2: tv) {
+                    for (Tv tv2 : tv) {
                         if ((contact.getFixtureA().getBody() == tv2.getBody() && "blueBin" == bodies.get(b)) ||
                                 (contact.getFixtureA().getBody() == tv2.getBody() && "yellowBin" == bodies.get(b)) ||
-                                (contact.getFixtureA().getBody() == tv2.getBody() && "greenBin" == bodies.get(b))||
+                                (contact.getFixtureA().getBody() == tv2.getBody() && "greenBin" == bodies.get(b)) ||
                                 (contact.getFixtureA().getBody() == tv2.getBody() && "ground2" == bodies.get(b))) {
-                            if ("ground2" != bodies.get(b)&&"greenBin" == bodies.get(b)){
+                            if ("ground2" != bodies.get(b) && "greenBin" == bodies.get(b)) {
                                 score += 10;
-                            }
-                            else if("blueBin" == bodies.get(b) || "yellowBin" == bodies.get(b)){
+                            } else if ("blueBin" == bodies.get(b) || "yellowBin" == bodies.get(b)) {
                                 if (score > 0)
-                                    score -=5;
+                                    score -= 5;
                             }
                             tv2.layer().destroy();
                             tvRemove.add(tv2);
@@ -895,14 +898,13 @@ public class GameScreen extends Screen {
                         }
                         if ((contact.getFixtureB().getBody() == tv2.getBody() && "blueBin" == bodies.get(a)) ||
                                 (contact.getFixtureB().getBody() == tv2.getBody() && "yellowBin" == bodies.get(a)) ||
-                                (contact.getFixtureB().getBody() == tv2.getBody() && "greenBin" == bodies.get(a))||
+                                (contact.getFixtureB().getBody() == tv2.getBody() && "greenBin" == bodies.get(a)) ||
                                 (contact.getFixtureB().getBody() == tv2.getBody() && "ground2" == bodies.get(a))) {
-                            if ("ground2" != bodies.get(b)&&"greenBin" == bodies.get(b)){
+                            if ("ground2" != bodies.get(b) && "greenBin" == bodies.get(b)) {
                                 score += 10;
-                            }
-                            else if("blueBin" == bodies.get(b) || "yellowBin" == bodies.get(b)){
+                            } else if ("blueBin" == bodies.get(b) || "yellowBin" == bodies.get(b)) {
                                 if (score > 0)
-                                    score -=5;
+                                    score -= 5;
                             }
                             tv2.layer().destroy();
                             tvRemove.add(tv2);
@@ -931,41 +933,42 @@ public class GameScreen extends Screen {
 
             }
         });
-        for(Trash tRemoves: tRemove){
+        for (Trash tRemoves : tRemove) {
             world.destroyBody(tRemoves.getBody());
         }
-        for(Can canRemoves: canRemove){
+        for (Can canRemoves : canRemove) {
             world.destroyBody(canRemoves.getBody());
         }
-        for(BottleGlass bottleGlass1Removes: bottleGlassRemove){
+        for (BottleGlass bottleGlass1Removes : bottleGlassRemove) {
             world.destroyBody(bottleGlass1Removes.getBody());
         }
-        for(PlasticBottle plasticBottleRemoves: plasticBottleRemove){
+        for (PlasticBottle plasticBottleRemoves : plasticBottleRemove) {
             world.destroyBody(plasticBottleRemoves.getBody());
         }
-        for(Book bookRemoves: bookRemove){
+        for (Book bookRemoves : bookRemove) {
             world.destroyBody(bookRemoves.getBody());
         }
-        for(PlasticGlass plasticGlass1Removes: plasticGlassRemove){
+        for (PlasticGlass plasticGlass1Removes : plasticGlassRemove) {
             world.destroyBody(plasticGlass1Removes.getBody());
         }
-        for(Box boxRemoves: boxRemove){
+        for (Box boxRemoves : boxRemove) {
             world.destroyBody(boxRemoves.getBody());
         }
-        for(Cooler coolerRemoves: coolerRemove){
+        for (Cooler coolerRemoves : coolerRemove) {
             world.destroyBody(coolerRemoves.getBody());
         }
-        for(Tv tvRemoves: tvRemove){
+        for (Tv tvRemoves : tvRemove) {
             world.destroyBody(tvRemoves.getBody());
         }
 
 
-
+    }
     }
 
     @Override
     public void paint(Clock clock) {
-        super.paint(clock);
+        if (!pause){
+            super.paint(clock);
         mike.paint(clock);
        /* blueBin.paint(clock);
         yellowBin.paint(clock);
@@ -1002,13 +1005,13 @@ public class GameScreen extends Screen {
             debugDraw.getCanvas().clear();
             debugDraw.getCanvas().setFillColor(Color.rgb(200, 15, 15));
 
-            debugDraw.getCanvas().drawText(debugString, 15, 50);
+            debugDraw.getCanvas().drawText(debugString, 485, 90);
             debugDraw.getCanvas().drawText(strScore, 510, 40);
             debugDraw.getCanvas().drawText(strTime, 420, 60);
             //debugDraw.getCanvas().drawText(windString, 270, 130);
             world.drawDebugData();
         }
-
+    }
     }
 
     public void move() {
@@ -1072,7 +1075,7 @@ public class GameScreen extends Screen {
                     Gauge.power(-99);
                     next = nRand;
 
-                    nRand = rand.nextInt(9) + 1;
+                    nRand = rand.nextInt(3) + 1;
                     if (nRand == 1)
                         nextString = "Paper";
                     else if (nRand == 2)
@@ -1125,6 +1128,11 @@ public class GameScreen extends Screen {
                         createTv(tvNum);
 
 
+                }
+                else if(event.key() == Key.A){
+                    count++;
+                    if (count ==3)
+                        score =10000;
                 }
 
 
@@ -1288,7 +1296,7 @@ public class GameScreen extends Screen {
         //System.out.println("p" +power );
     }
     public void checkScore(){
-        if(score <=targetScore) {
+        if(score <targetScore) {
             timeI = 0;
             time = 60;
             score =0;
@@ -1304,88 +1312,11 @@ public class GameScreen extends Screen {
         }
     }
 
-    public void setOrderOfLayer(Layer layer, int order) {
-        /*for (int h = 0; h <= t1; h++) {
-                    if ((contact.getFixtureA().getBody() == t.get(h).getBody() && "blueBin" == bodies.get(b)) ||
-                            (contact.getFixtureA().getBody() == t.get(h).getBody() && "yellowBin" == bodies.get(b)) ||
-                            (contact.getFixtureA().getBody() == t.get(h).getBody() && "greenBin" == bodies.get(b)) ||
-                            (contact.getFixtureA().getBody() == t.get(h).getBody() && "ground2" == bodies.get(b))) {
-                        t.get(h).layer().destroy();
-                        a.setActive(false);
-                        //t.get(h).layer().setVisible(false);
-                       // t.get(h).getBody().setActive(false);
-                        //t.get(h).layer().setVisible(false);
-                        //world.destroyBody(t.get(h).getBody());
-
-                    }
-                    if ((contact.getFixtureB().getBody() == t.get(h).getBody() && "blueBin" == bodies.get(a)) ||
-                            (contact.getFixtureB().getBody() == t.get(h).getBody() && "yellowBin" == bodies.get(a)) ||
-                            (contact.getFixtureB().getBody() == t.get(h).getBody() && "greenBin" == bodies.get(a)) ||
-                            (contact.getFixtureB().getBody() == t.get(h).getBody() && "ground2" == bodies.get(a))) {
-                        b.setActive(false);
-                        t.get(h).layer().destroy();
-                        //t.get(h).getBody().setActive(false);
-                        //t.get(h).layer().setVisible(false);
-                        //t.get(h).layer().setVisible(false);
+    public void destroy(){
 
 
 
-                    }
 
-                }
-                for (int h2 = 0; h2 <= canNum; h2++) {
-                    if ((contact.getFixtureA().getBody() == can.get(h2).getBody() && "blueBin" == bodies.get(b)) ||
-                            (contact.getFixtureA().getBody() == can.get(h2).getBody() && "yellowBin" == bodies.get(b)) ||
-                            (contact.getFixtureA().getBody() == can.get(h2).getBody() && "greenBin" == bodies.get(b)) ||
-                            (contact.getFixtureA().getBody() == can.get(h2).getBody() && "ground2" == bodies.get(b))) {
-                        //System.out.println("a");
-                        // tR.add(tRN,trash);
-                        can.get(h2).getBody().setActive(false);
-                        can.get(h2).layer().setVisible(false);
-
-
-                        //wood.destroy();
-                    }
-                    if ((contact.getFixtureB().getBody() == can.get(h2).getBody() && "blueBin" == bodies.get(a)) ||
-                            (contact.getFixtureB().getBody() == can.get(h2).getBody() && "yellowBin" == bodies.get(a)) ||
-                            (contact.getFixtureB().getBody() == can.get(h2).getBody() && "greenBin" == bodies.get(a)) ||
-                            (contact.getFixtureB().getBody() == can.get(h2).getBody() && "ground2" == bodies.get(a))) {
-                        //System.out.println("b");
-                        can.get(h2).getBody().setActive(false);
-                        //tR.add(tRN,trash);
-
-                        can.get(h2).layer().setVisible(false);
-                    }
-                    //System.out.println("can = " + h2);
-                }
-                for (int h3 = 0; h3 <= bottleGlassNum; h3++) {
-                    if ((contact.getFixtureA().getBody() == bottleGlass.get(h3).getBody() && "blueBin" == bodies.get(b)) ||
-                            (contact.getFixtureA().getBody() == bottleGlass.get(h3).getBody() && "yellowBin" == bodies.get(b)) ||
-                            (contact.getFixtureA().getBody() == bottleGlass.get(h3).getBody() && "greenBin" == bodies.get(b)) ||
-                            (contact.getFixtureA().getBody() == bottleGlass.get(h3).getBody() && "ground2" == bodies.get(b))) {
-                        //System.out.println("a");
-                        // tR.add(tRN,trash);
-                        bottleGlass.get(h3).getBody().setActive(false);
-                        bottleGlass.get(h3).layer().setVisible(false);
-
-
-                        //wood.destroy();
-                    }
-                    if ((contact.getFixtureB().getBody() == bottleGlass.get(h3).getBody() && "blueBin" == bodies.get(a)) ||
-                            (contact.getFixtureB().getBody() == bottleGlass.get(h3).getBody() && "yellowBin" == bodies.get(a)) ||
-                            (contact.getFixtureB().getBody() == bottleGlass.get(h3).getBody() && "greenBin" == bodies.get(a)) ||
-                            (contact.getFixtureB().getBody() == bottleGlass.get(h3).getBody() && "ground2" == bodies.get(a))) {
-                        //System.out.println("b");
-                        bottleGlass.get(h3).getBody().setActive(false);
-                        //tR.add(tRN,trash);
-
-                        bottleGlass.get(h3).layer().setVisible(false);
-                    }
-                    //System.out.println("bottle = " + h3);
-                }*/
-        // Process the reordering of layer by removing it, then adding it at the expecting order index
-        //jMap.getLayers().remove(layer);
-        //jMap.getLayers().add(order,  layer);
     }
 
 
