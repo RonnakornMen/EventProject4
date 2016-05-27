@@ -13,8 +13,7 @@ import playn.core.ImageLayer;
 import playn.core.ImageLayer;
 import playn.core.Mouse;
 import playn.core.PlayN;
-import sut.game01.core.GameScreen;
-import sut.game01.core.HomeScreen;
+import sut.game01.core.*;
 import tripleplay.game.Screen;
 import react.UnitSlot;
 import tripleplay.game.UIScreen;
@@ -64,6 +63,7 @@ public class Tv {
                 body = initPhysicsBody(world,
                         GameScreen.M_PER_PIXEL * x_px,
                         GameScreen.M_PER_PIXEL * y_px);
+
                 hasLoaded = true;
             }
 
@@ -108,6 +108,18 @@ public class Tv {
                 (body.getPosition().x /GameScreen.M_PER_PIXEL) +0,
                 body.getPosition().y / GameScreen.M_PER_PIXEL);
 
+        sprite.layer().setTranslation(
+                (body.getPosition().x / GameScreen2.M_PER_PIXEL) +0,
+                body.getPosition().y / GameScreen2.M_PER_PIXEL);
+
+        sprite.layer().setTranslation(
+                (body.getPosition().x / GameScreen3.M_PER_PIXEL) +0,
+                body.getPosition().y / GameScreen3.M_PER_PIXEL);
+
+        sprite.layer().setTranslation(
+                (body.getPosition().x / GameScreen4.M_PER_PIXEL) +0,
+                body.getPosition().y / GameScreen4.M_PER_PIXEL);
+
     }
     private Body initPhysicsBody(World world, float x, float y) {
         BodyDef bodyDef = new BodyDef();
@@ -120,12 +132,12 @@ public class Tv {
         /*CircleShape shape = new CircleShape();
         shape.setRadius(0.7f);*/
         PolygonShape shape = new PolygonShape();
-        shape.setAsBox(30 * GameScreen.M_PER_PIXEL / 2,
-                30 * GameScreen.M_PER_PIXEL / 2);
+        shape.setAsBox(40 * GameScreen.M_PER_PIXEL / 2,
+                40 * GameScreen.M_PER_PIXEL / 2);
 
         FixtureDef fixtureDef = new FixtureDef();//น้ำหนัก
         fixtureDef.shape = shape;
-        fixtureDef.density = 0.4f;
+        fixtureDef.density = 0.45f;
         fixtureDef.friction = 0.1f;
         fixtureDef.restitution = 0.35f;
 
