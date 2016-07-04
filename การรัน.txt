@@ -1,0 +1,4 @@
+1. PATH=$MAVEN_HOME/bin:$PATH
+2. export PATH
+3. เข้า directory
+4. mvn -Pjava test
