@@ -49,8 +49,8 @@ public class GameScreen4 extends Screen {
 
     private final ScreenStack ss;
     private final SettingScreen settingScreen;
-    private final OverScreen overScreen;
-    private final EndScreen endScreen;
+    //private final OverScreen overScreen;
+    //private final EndScreen endScreen;
     private final ImageLayer bg;
     private final ImageLayer backButton;
     private final ImageLayer settingButton;
@@ -69,6 +69,10 @@ public class GameScreen4 extends Screen {
     private Image cloudImage;
     private float xC = 24.0f;
     private float yC = 100;
+    private Image windImage;
+    private final ImageLayer wind;
+    private float xW = 620f;
+    private float yW = 200;
     static ImageLayer pauseStage;
     boolean pause = false;
     private final ImageLayer wall;
@@ -138,7 +142,7 @@ public class GameScreen4 extends Screen {
     int time =45;
     private String strTime = "" + time;
     int time2;
-    int targetScore =60;
+    int targetScore =45;
     private String strScore = "Score = " + score + "/" + targetScore;
 
     public static float M_PER_PIXEL = 1 / 26.666667f;
@@ -158,13 +162,16 @@ public class GameScreen4 extends Screen {
     Random rand2 = new Random();
     int windRand = rand2.nextInt(5) + 1;
 
+    Random rand3 = new Random();
+    int randWind = rand3.nextInt(3) + 1;
+
 
 
     public GameScreen4(final ScreenStack ss) {
         this.ss = ss;
         this.settingScreen = new SettingScreen(ss);
-        this.overScreen = new OverScreen(ss);
-        this.endScreen = new EndScreen(ss);
+      //  this.overScreen = new OverScreen(ss);
+       // this.endScreen = new EndScreen(ss);
 
 
 
@@ -190,7 +197,7 @@ public class GameScreen4 extends Screen {
             nextString = "TV";
 
         debugString = "Next is " + nextString;
-        windRand = windRand * (-100);
+        windRand = windRand * (-25);
         windString = "WIND =  " + windRand;
 
         bgImage = assets().getImage("images/bg.png");
@@ -204,11 +211,7 @@ public class GameScreen4 extends Screen {
         backButton.addListener(new Mouse.LayerAdapter() {
             @Override
             public void onMouseUp(Mouse.ButtonEvent event) {
-                timeI = 0;
-                time = 45;
-                score =0;
-                debugDraw.getCanvas().clear();
-                ss.remove(ss.top()); // pop screen
+                ss.push(new LevelScreen(ss));
             }
         });
         //====================================================================settingButton
@@ -251,7 +254,7 @@ public class GameScreen4 extends Screen {
         overButton.addListener(new Mouse.LayerAdapter() {
             @Override
             public void onMouseUp(Mouse.ButtonEvent event) {
-                ss.push(overScreen);
+               // ss.push(overScreen);
             }
         });
         //==================================================================================end
@@ -262,7 +265,7 @@ public class GameScreen4 extends Screen {
         endButton.addListener(new Mouse.LayerAdapter() {
             @Override
             public void onMouseUp(Mouse.ButtonEvent event) {
-                ss.push(endScreen);
+                //ss.push(endScreen);
             }
         });
         //==========================================================================clound
@@ -270,6 +273,11 @@ public class GameScreen4 extends Screen {
         cloud = graphics().createImageLayer(cloudImage);
         graphics().rootLayer().add(cloud);
         cloud.setTranslation(0, 105);
+        //==========================================================================wind
+        windImage = assets().getImage("images/wind.png");
+        wind = graphics().createImageLayer(windImage);
+        graphics().rootLayer().add(wind);
+        wind.setTranslation(0, 180);
 
 
         //===========================================================================wall
@@ -352,6 +360,7 @@ public class GameScreen4 extends Screen {
         this.layer.add(mike.layer());
         bodies.put(mike, "mike");
         this.layer.add(cloud);
+        this.layer.add(wind);
 
 
         /*blueBin = new BlueBin(world, 400f, 480f);
@@ -538,6 +547,7 @@ public class GameScreen4 extends Screen {
         strTime = "" + time;
         strScore = "Score = " + score + "/" + targetScore;
 
+        windString = "WIND =  " + windRand;
 
         world.step(0.033f, 10, 10);
         //=========================================moveCloud
@@ -547,7 +557,13 @@ public class GameScreen4 extends Screen {
             xC = -cloudImage.width();
         }
         cloud.setTranslation(xC, yC);
+            //=========================================movewind
 
+            xW -= 0.5f * delta / 4;
+            if (xW < 0 - windImage.width()) {
+                xW = cloudImage.width()+bgImage.width();
+            }
+            wind.setTranslation(xW, yW);
 
         if (yM > 320 && b == 0) {
             yM -= 0.5f * delta / 20;
@@ -603,7 +619,7 @@ public class GameScreen4 extends Screen {
                 // System.out.println("b = "+bodies.get(b));
                 if ((contact.getFixtureA().getBody() == mike.getBody())) {
                     //System.out.println(power);
-                    b.applyForce(new Vec2(power, -165f), b.getPosition());
+                    b.applyForce(new Vec2(power + windRand, -165f), b.getPosition());
                     for (Body b1 : bodiesGround.values()) {
                         if (b1 == b)
                             System.out.println("contact ground");
@@ -633,7 +649,7 @@ public class GameScreen4 extends Screen {
                             score += 10;
                         } else if ("yellowBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
                             if (score > 0)
-                                score -= 5;
+                                score -= 10;
                         }
                         trash.layer().destroy();
                         tRemove.add(trash);
@@ -648,7 +664,7 @@ public class GameScreen4 extends Screen {
                             score += 10;
                         } else if ("yellowBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
                             if (score > 0)
-                                score -= 5;
+                                score -= 10;
                         }
                         trash.layer().destroy();
                         //world.destroyBody(trash.getBody());
@@ -667,7 +683,7 @@ public class GameScreen4 extends Screen {
                             score += 10;
                         } else if ("blueBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
                             if (score > 0)
-                                score -= 5;
+                                score -= 10;
                         }
                         can2.layer().destroy();
                         canRemove.add(can2);
@@ -681,7 +697,7 @@ public class GameScreen4 extends Screen {
                             score += 10;
                         } else if ("blueBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
                             if (score > 0)
-                                score -= 5;
+                                score -= 10;
                         }
                         can2.layer().destroy();
                         canRemove.add(can2);
@@ -697,7 +713,7 @@ public class GameScreen4 extends Screen {
                             score += 10;
                         } else if ("blueBin" == bodies.get(b) || "yellowBin" == bodies.get(b)) {
                             if (score > 0)
-                                score -= 5;
+                                score -= 10;
                         }
                         bottleGlass2.layer().destroy();
                         bottleGlassRemove.add(bottleGlass2);
@@ -711,7 +727,7 @@ public class GameScreen4 extends Screen {
                             score += 10;
                         } else if ("blueBin" == bodies.get(b) || "yellowBin" == bodies.get(b)) {
                             if (score > 0)
-                                score -= 5;
+                                score -= 10;
                         }
                         bottleGlass2.layer().destroy();
                         bottleGlassRemove.add(bottleGlass2);
@@ -729,7 +745,7 @@ public class GameScreen4 extends Screen {
                             score += 10;
                         } else if ("blueBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
                             if (score > 0)
-                                score -= 5;
+                                score -= 10;
                         }
                         plasticBottle2.layer().destroy();
                         plasticBottleRemove.add(plasticBottle2);
@@ -743,7 +759,7 @@ public class GameScreen4 extends Screen {
                             score += 10;
                         } else if ("blueBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
                             if (score > 0)
-                                score -= 5;
+                                score -= 10;
                         }
                         plasticBottle2.layer().destroy();
                         plasticBottleRemove.add(plasticBottle2);
@@ -761,7 +777,7 @@ public class GameScreen4 extends Screen {
                             score += 10;
                         } else if ("yellowBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
                             if (score > 0)
-                                score -= 5;
+                                score -= 10;
                         }
                         book2.layer().destroy();
                         bookRemove.add(book2);
@@ -775,7 +791,7 @@ public class GameScreen4 extends Screen {
                             score += 10;
                         } else if ("yellowBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
                             if (score > 0)
-                                score -= 5;
+                                score -= 10;
                         }
                         book2.layer().destroy();
                         bookRemove.add(book2);
@@ -792,7 +808,7 @@ public class GameScreen4 extends Screen {
                                 score += 10;
                             } else if ("blueBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
                                 if (score > 0)
-                                    score -= 5;
+                                    score -= 10;
                             }
                             plasticGlass2.layer().destroy();
                             plasticGlassRemove.add(plasticGlass2);
@@ -806,7 +822,7 @@ public class GameScreen4 extends Screen {
                                 score += 10;
                             } else if ("blueBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
                                 if (score > 0)
-                                    score -= 5;
+                                    score -= 10;
                             }
                             plasticGlass2.layer().destroy();
                             plasticGlassRemove.add(plasticGlass2);
@@ -823,7 +839,7 @@ public class GameScreen4 extends Screen {
                                 score += 10;
                             } else if ("yellowBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
                                 if (score > 0)
-                                    score -= 5;
+                                    score -= 10;
                             }
                             box2.layer().destroy();
                             boxRemove.add(box2);
@@ -837,7 +853,7 @@ public class GameScreen4 extends Screen {
                                 score += 10;
                             } else if ("yellowBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
                                 if (score > 0)
-                                    score -= 5;
+                                    score -= 10;
                             }
                             box2.layer().destroy();
                             boxRemove.add(box2);
@@ -854,7 +870,7 @@ public class GameScreen4 extends Screen {
                                 score += 10;
                             } else if ("blueBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
                                 if (score > 0)
-                                    score -= 5;
+                                    score -= 10;
                             }
                             cooler2.layer().destroy();
                             coolerRemove.add(cooler2);
@@ -868,7 +884,7 @@ public class GameScreen4 extends Screen {
                                 score += 10;
                             } else if ("blueBin" == bodies.get(b) || "greenBin" == bodies.get(b)) {
                                 if (score > 0)
-                                    score -= 5;
+                                    score -= 10;
                             }
                             cooler2.layer().destroy();
                             coolerRemove.add(cooler2);
@@ -885,7 +901,7 @@ public class GameScreen4 extends Screen {
                                 score += 10;
                             } else if ("blueBin" == bodies.get(b) || "yellowBin" == bodies.get(b)) {
                                 if (score > 0)
-                                    score -= 5;
+                                    score -= 10;
                             }
                             tv2.layer().destroy();
                             tvRemove.add(tv2);
@@ -899,7 +915,7 @@ public class GameScreen4 extends Screen {
                                 score += 10;
                             } else if ("blueBin" == bodies.get(b) || "yellowBin" == bodies.get(b)) {
                                 if (score > 0)
-                                    score -= 5;
+                                    score -= 10;
                             }
                             tv2.layer().destroy();
                             tvRemove.add(tv2);
@@ -1122,6 +1138,12 @@ public class GameScreen4 extends Screen {
                         //createTrash(t1);
                         createTv(tvNum);
 
+                    randWind = rand3.nextInt(3) + 1;
+                    if(randWind == 1) {
+                        windRand = rand2.nextInt(5) + 1;
+                        windRand = windRand * (-25);
+                    }
+
 
                 }
 
@@ -1176,7 +1198,7 @@ public class GameScreen4 extends Screen {
 
     public void createCan(int canNum2) {
         this.canNum = canNum2;
-        can.add(canNum, new Can(world, xMike2 + 30, yMike2 - 70));
+        can.add(canNum, new Can(world, xMike2 + 25, yMike2 - 70));
         bodies.put(can, "Can " + canNum);
         layer.add(can.get(canNum).layer());
         can.get(canNum).hasThrow(1);
@@ -1194,7 +1216,7 @@ public class GameScreen4 extends Screen {
 
     public void createBottleGlass(int bottleGlassNum2) {
         this.bottleGlassNum = bottleGlassNum2;
-        bottleGlass.add(bottleGlassNum, new BottleGlass(world, xMike2 + 30, yMike2 - 70));
+        bottleGlass.add(bottleGlassNum, new BottleGlass(world, xMike2 + 25, yMike2 - 70));
         bodies.put(bottleGlass, "BottleGlass " + bottleGlassNum);
         layer.add(bottleGlass.get(bottleGlassNum).layer());
         bottleGlass.get(bottleGlassNum).hasThrow(1);
@@ -1204,7 +1226,7 @@ public class GameScreen4 extends Screen {
 
     public void createPlasticBottle(int plasticBottleNum2) {
         this.plasticBottleNum = plasticBottleNum2;
-        plasticBottle.add(plasticBottleNum, new PlasticBottle(world, xMike2 + 30, yMike2 - 70));
+        plasticBottle.add(plasticBottleNum, new PlasticBottle(world, xMike2 + 25, yMike2 - 70));
         bodies.put(plasticBottle, "PlasticBottle " + plasticBottleNum);
         layer.add(plasticBottle.get(plasticBottleNum).layer());
         plasticBottle.get(plasticBottleNum).hasThrow(1);
@@ -1215,7 +1237,7 @@ public class GameScreen4 extends Screen {
 
     public void createBook(int bookNum2) {
         this.bookNum = bookNum2;
-        book.add(bookNum, new Book(world, xMike2 + 30, yMike2 - 70));
+        book.add(bookNum, new Book(world, xMike2 + 25, yMike2 - 70));
         bodies.put(book, "Book " + bookNum);
         layer.add(book.get(bookNum).layer());
         book.get(bookNum).hasThrow(1);
@@ -1225,7 +1247,7 @@ public class GameScreen4 extends Screen {
 
     public void createPlasticGlass(int plasticGlassNum2) {
         this.plasticGlassNum = plasticGlassNum2;
-        plasticGlass.add(plasticGlassNum, new PlasticGlass(world, xMike2 + 30, yMike2 - 70));
+        plasticGlass.add(plasticGlassNum, new PlasticGlass(world, xMike2 + 25, yMike2 - 70));
         bodies.put(plasticGlass, "PlasticGlass " + plasticGlassNum);
         layer.add(plasticGlass.get(plasticGlassNum).layer());
         plasticGlass.get(plasticGlassNum).hasThrow(1);
@@ -1234,7 +1256,7 @@ public class GameScreen4 extends Screen {
     }
     public void createBox(int boxNum2) {
         this.boxNum = boxNum2;
-        box.add(boxNum, new Box(world, xMike2 + 30, yMike2 - 70));
+        box.add(boxNum, new Box(world, xMike2 + 25, yMike2 - 70));
         bodies.put(box, "Box " + boxNum);
         layer.add(box.get(boxNum).layer());
         box.get(boxNum).hasThrow(1);
@@ -1243,7 +1265,7 @@ public class GameScreen4 extends Screen {
     }
     public void createCooler(int coolerNum2) {
         this.coolerNum = coolerNum2;
-        cooler.add(coolerNum, new Cooler(world, xMike2 + 30, yMike2 - 70));
+        cooler.add(coolerNum, new Cooler(world, xMike2 + 25, yMike2 - 70));
         bodies.put(cooler, "Cooler " + coolerNum);
         layer.add(cooler.get(coolerNum).layer());
         cooler.get(coolerNum).hasThrow(1);
@@ -1252,7 +1274,7 @@ public class GameScreen4 extends Screen {
     }
     public void createTv(int tvNum2) {
         this.tvNum = tvNum2;
-        tv.add(tvNum, new Tv(world, xMike2 + 30, yMike2 - 70));
+        tv.add(tvNum, new Tv(world, xMike2 + 25, yMike2 - 70));
         bodies.put(tv, "Tv " + tvNum);
         layer.add(tv.get(tvNum).layer());
         tv.get(tvNum).hasThrow(1);
@@ -1291,18 +1313,11 @@ public class GameScreen4 extends Screen {
     }
     public void checkScore(){
         if(score <targetScore) {
-            timeI = 0;
-            time = 45;
-            score =0;
-            debugDraw.getCanvas().clear();
-            ss.push(overScreen);
+            ss.push(new OverScreen(ss,4));
         }
         else if(score >=targetScore){
-            timeI = 0;
-            time = 45;
-            score =0;
-            debugDraw.getCanvas().clear();
-            ss.push(endScreen);
+
+            ss.push(new EndScreen(ss,4));
         }
     }
 

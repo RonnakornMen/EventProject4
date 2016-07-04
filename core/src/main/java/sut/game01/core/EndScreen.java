@@ -22,7 +22,11 @@ public class EndScreen extends Screen  {
 
   private final ScreenStack ss;
   //private final HomeScreen homeScreen;
-  //private final GameScreen gameScreen;
+
+    private final GameScreen gameScreen;
+    private final GameScreen2 gameScreen2;
+    private final GameScreen3 gameScreen3;
+    private final GameScreen4 gameScreen4;
   private final ImageLayer bg;
   private final ImageLayer backButton;
   private final ImageLayer window;
@@ -33,8 +37,13 @@ public class EndScreen extends Screen  {
 
   private Root root;
 
-  public EndScreen(final ScreenStack ss){
+  public EndScreen(final ScreenStack ss, final int level){
     this.ss = ss;
+    this.gameScreen = new GameScreen(ss);
+
+      this.gameScreen2 =new GameScreen2(ss);
+      this.gameScreen3 =new GameScreen3(ss);
+      this.gameScreen4 =new GameScreen4(ss);
    // this.homeScreen =new HomeScreen(ss);
    // this.levelScreen =new LevelScreen(ss);
 
@@ -53,8 +62,14 @@ public class EndScreen extends Screen  {
     reButton.addListener(new Mouse.LayerAdapter(){
       @Override
       public void onMouseUp(Mouse.ButtonEvent event){
-        ss.remove(ss.top());
-
+          if(level ==1)
+              ss.push(gameScreen);
+          else if(level ==2)
+              ss.push(gameScreen2);
+          else if(level ==3)
+              ss.push(gameScreen3);
+          else if(level ==4)
+              ss.push(gameScreen4);
          }
     });
 
@@ -65,8 +80,7 @@ public class EndScreen extends Screen  {
     levelButton.addListener(new Mouse.LayerAdapter(){
       @Override
       public void onMouseUp(Mouse.ButtonEvent event){
-          ss.remove(ss.top()); 
-          ss.remove(ss.top()); 
+          ss.push(new LevelScreen(ss));
          }
     });
 
@@ -77,9 +91,8 @@ public class EndScreen extends Screen  {
     homeButton.addListener(new Mouse.LayerAdapter(){
       @Override
       public void onMouseUp(Mouse.ButtonEvent event){
-          ss.remove(ss.top()); 
-          ss.remove(ss.top()); 
-          ss.remove(ss.top());
+          HomeScreen.settingSound(false);
+          ss.push(new HomeScreen(ss));
          }
     });
     

@@ -137,7 +137,7 @@ public class Book {
 
         FixtureDef fixtureDef = new FixtureDef();//น้ำหนัก
         fixtureDef.shape = shape;
-        fixtureDef.density = 0.4f;
+        fixtureDef.density = 0.45f;
         fixtureDef.friction = 0.1f;
         fixtureDef.restitution = 0.35f;
 
