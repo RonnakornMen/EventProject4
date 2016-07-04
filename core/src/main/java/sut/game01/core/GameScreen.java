@@ -49,8 +49,8 @@ public class GameScreen extends Screen {
 
     private final ScreenStack ss;
     private final SettingScreen settingScreen;
-    private final OverScreen overScreen;
-    private final EndScreen endScreen;
+    //private final OverScreen overScreen;
+    //private final EndScreen endScreen;
     private final ImageLayer bg;
     private final ImageLayer backButton;
     private final ImageLayer settingButton;
@@ -165,8 +165,8 @@ public class GameScreen extends Screen {
     public GameScreen(final ScreenStack ss) {
         this.ss = ss;
         this.settingScreen = new SettingScreen(ss);
-        this.overScreen = new OverScreen(ss);
-        this.endScreen = new EndScreen(ss);
+        //this.overScreen = new OverScreen(ss);
+        //this.endScreen = new EndScreen(ss);
 
 
 
@@ -206,11 +206,11 @@ public class GameScreen extends Screen {
         backButton.addListener(new Mouse.LayerAdapter() {
             @Override
             public void onMouseUp(Mouse.ButtonEvent event) {
-                timeI = 0;
+                /*timeI = 0;
                 time = 60;
                 score =0;
-                debugDraw.getCanvas().clear();
-                ss.remove(ss.top()); // pop screen
+                debugDraw.getCanvas().clear();*/
+                ss.push(new LevelScreen(ss)); // pop screen
             }
         });
         //====================================================================settingButton
@@ -255,7 +255,7 @@ public class GameScreen extends Screen {
         overButton.addListener(new Mouse.LayerAdapter() {
             @Override
             public void onMouseUp(Mouse.ButtonEvent event) {
-                ss.push(overScreen);
+               // ss.push(overScreen);
             }
         });
         //==================================================================================end
@@ -266,7 +266,7 @@ public class GameScreen extends Screen {
         endButton.addListener(new Mouse.LayerAdapter() {
             @Override
             public void onMouseUp(Mouse.ButtonEvent event) {
-                ss.push(endScreen);
+                //ss.push(endScreen);
 
             }
         });
@@ -1182,7 +1182,7 @@ public class GameScreen extends Screen {
 
     public void createCan(int canNum2) {
         this.canNum = canNum2;
-        can.add(canNum, new Can(world, xMike2 + 30, yMike2 - 70));
+        can.add(canNum, new Can(world, xMike2 + 25, yMike2 - 70));
         bodies.put(can, "Can " + canNum);
         layer.add(can.get(canNum).layer());
         can.get(canNum).hasThrow(1);
@@ -1200,7 +1200,7 @@ public class GameScreen extends Screen {
 
     public void createBottleGlass(int bottleGlassNum2) {
         this.bottleGlassNum = bottleGlassNum2;
-        bottleGlass.add(bottleGlassNum, new BottleGlass(world, xMike2 + 30, yMike2 - 70));
+        bottleGlass.add(bottleGlassNum, new BottleGlass(world, xMike2 + 25, yMike2 - 70));
         bodies.put(bottleGlass, "BottleGlass " + bottleGlassNum);
         layer.add(bottleGlass.get(bottleGlassNum).layer());
         bottleGlass.get(bottleGlassNum).hasThrow(1);
@@ -1210,7 +1210,7 @@ public class GameScreen extends Screen {
 
     public void createPlasticBottle(int plasticBottleNum2) {
         this.plasticBottleNum = plasticBottleNum2;
-        plasticBottle.add(plasticBottleNum, new PlasticBottle(world, xMike2 + 30, yMike2 - 70));
+        plasticBottle.add(plasticBottleNum, new PlasticBottle(world, xMike2 + 25, yMike2 - 70));
         bodies.put(plasticBottle, "PlasticBottle " + plasticBottleNum);
         layer.add(plasticBottle.get(plasticBottleNum).layer());
         plasticBottle.get(plasticBottleNum).hasThrow(1);
@@ -1221,7 +1221,7 @@ public class GameScreen extends Screen {
 
     public void createBook(int bookNum2) {
         this.bookNum = bookNum2;
-        book.add(bookNum, new Book(world, xMike2 + 30, yMike2 - 70));
+        book.add(bookNum, new Book(world, xMike2 + 25, yMike2 - 70));
         bodies.put(book, "Book " + bookNum);
         layer.add(book.get(bookNum).layer());
         book.get(bookNum).hasThrow(1);
@@ -1297,18 +1297,18 @@ public class GameScreen extends Screen {
     }
     public void checkScore(){
         if(score <targetScore) {
-            timeI = 0;
+            /*timeI = 0;
             time = 60;
             score =0;
-            debugDraw.getCanvas().clear();
-            ss.push(overScreen);
+            debugDraw.getCanvas().clear();*/
+            ss.push(new OverScreen(ss,1));
         }
         else if(score >=targetScore){
-            timeI = 0;
+           /* timeI = 0;
             time = 60;
             score =0;
-            debugDraw.getCanvas().clear();
-            ss.push(endScreen);
+            debugDraw.getCanvas().clear();*/
+            ss.push(new EndScreen(ss,1));
         }
     }
 

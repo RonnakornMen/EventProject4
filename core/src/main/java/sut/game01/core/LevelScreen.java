@@ -21,7 +21,7 @@ public class LevelScreen extends Screen  {
 
   private final ScreenStack ss;
   private final GameScreen gameScreen;
-  private final GameScreen2 gameScreen2;
+ private final GameScreen2 gameScreen2;
   private final GameScreen3 gameScreen3;
   private final GameScreen4 gameScreen4;
   private final ImageLayer bg;
@@ -105,7 +105,9 @@ public class LevelScreen extends Screen  {
     homeButton.addListener(new Mouse.LayerAdapter(){
       @Override
       public void onMouseUp(Mouse.ButtonEvent event){
-        ss.remove(ss.top()); // pop screen
+        //ss.remove(ss.top()); // pop screen
+          HomeScreen.settingSound(false);
+          ss.push(new HomeScreen(ss));
       }
     });
     //=============================================================gameButton

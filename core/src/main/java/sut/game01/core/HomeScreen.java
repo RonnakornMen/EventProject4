@@ -117,7 +117,7 @@ public class HomeScreen extends Screen  {
     this.layer.add(bg);
     this.layer.add(startButton);  
     this.layer.add(settingButton);
-    this.layer.add(faceButton);
+    //this.layer.add(faceButton);
     this.layer.add(name);
     if(controlMusic == true)
 
